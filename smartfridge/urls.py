@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.myFridge, name='myFridge'),
+    url(r'^register$', views.register, name='register'),
 
     # Route for built-in authentication with our own custom login page
     url(r'^login$', auth_views.login, {'template_name':'smartfridge/login.html'}, name='login'),

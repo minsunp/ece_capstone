@@ -5,8 +5,47 @@ from django.shortcuts import render
 
 # Create your views here.
 
+##################### Pages ###########################
 def myFridge(request):
     context = {}
 
     return render(request, 'smartfridge/myFridge.html', context)
 
+
+
+#################### Login & Register ####################
+def register(request):
+    
+    context = {}
+
+    # Just display the registration form if this is a GET request.
+    if request.method == 'GET':
+        context['form'] = RegistrationForm()
+        return render(request, 'smartfridge/register.html', context)
+
+    # Creates a bound form from the request POST parameters and makes the 
+    # form available in the request context dictionary.
+    form = RegistrationForm(request.POST)
+    context['form'] = form
+
+    # Validates the form.
+    if not form.is_valid():
+        return render(request, 'smartfridge/register.html', context)
+
+    # At this point, the form data is valid.  Register and login the user.
+    new_user = User.objects.create_user(username=form.cleaned_data['username'], 
+                                        password=form.cleaned_data['password1'],
+                                        email=form.cleaned_data['email'],
+                                        first_name=form.cleaned_data['first_name'],
+                                        last_name=form.cleaned_data['last_name'])
+    new_user.save()
+
+    # Create Profile model
+    new_profile = Profile(bio="Edit your bio here", user_model=new_user)
+    new_profile.save()
+
+    # Logs in the new user and redirects to his/her todo list
+    new_user = authenticate(username=form.cleaned_data['username'],
+                            password=form.cleaned_data['password1'])
+    login(request, new_user)
+    return redirect(reverse('myFridge'))
