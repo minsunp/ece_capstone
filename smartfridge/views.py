@@ -6,21 +6,25 @@ from django.shortcuts import render
 # Create your views here.
 
 ##################### Pages ###########################
+@login_required
 def myFridge(request):
     context = {}
 
     return render(request, 'smartfridge/myFridge.html', context)
 
+@login_required
 def shopping_list(request):
     context = {}
 
     return render(request, 'smartfridge/shopping_list.html', context)
 
+@login_required
 def your_recipes(request):
     context = {}
 
     return render(request, 'smartfridge/your_recipes.html', context)
 
+@login_required
 def my_profile(request):
     context = {}
 

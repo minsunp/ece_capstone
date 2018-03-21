@@ -52,6 +52,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'webapps.urls'
 
+# Used by the authentication system.
+# URL to use if the authentication system requires a user to log in.
+LOGIN_URL = '/smartfridge/login'
+
+# Default URL to redirect to after a user logs in.
+LOGIN_REDIRECT_URL = '/smartfridge/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
