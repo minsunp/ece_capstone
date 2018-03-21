@@ -5,6 +5,22 @@ from models import *
 
 MAX_UPLOAD_SIZE = 2500000
 
+# Form on the my profile page
+class MyProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ( 'bio', 'profile_pic')
+
+        def clean_profile_pic(self):
+            profile_pic = self.cleaned_data['profile_pic']
+            if not profile_pic:
+                raise forms.ValidationError('You must upload a picture')
+            if not profile_pic.content_type or not profile_pic.content_type.startswith('image'):
+                raise forms.ValidationError('File type is not image')
+            if profile_pic.size > MAX_UPLOAD_SIZE:
+                raise forms.ValidationError('File too big (max size is {0} bytes)'.format(MAX_UPLOAD_SIZE))
+            return profile_pic
+
 class RegistrationForm(forms.Form):
     first_name = forms.CharField(max_length=20)
     last_name  = forms.CharField(max_length=20)
