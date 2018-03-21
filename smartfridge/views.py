@@ -3,6 +3,20 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
+from django.shortcuts import render, redirect, get_object_or_404
+from django.core.urlresolvers import reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.contrib.auth import login, authenticate
+from django.utils import timezone
+import datetime
+from socialnetwork.forms import RegistrationForm, MyProfileForm
+from socialnetwork.models import Profile
+from django.db import transaction
+from django.http import HttpResponse, Http404
+from django.db.models import Q
+from django.views.decorators.csrf import ensure_csrf_cookie
+
 # Create your views here.
 
 ##################### Pages ###########################
