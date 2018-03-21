@@ -11,6 +11,21 @@ def myFridge(request):
 
     return render(request, 'smartfridge/myFridge.html', context)
 
+def shopping_list(request):
+    context = {}
+
+    return render(request, 'smartfridge/shopping_list.html', context)
+
+def your_recipes(request):
+    context = {}
+
+    return render(request, 'smartfridge/your_recipes.html', context)
+
+def my_profile(request):
+    context = {}
+
+    return render(request, 'smartfridge/my_profile.html', context)
+
 
 
 #################### Login & Register ####################
