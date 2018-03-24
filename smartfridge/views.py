@@ -10,8 +10,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.utils import timezone
 import datetime
-from socialnetwork.forms import RegistrationForm, MyProfileForm
-from socialnetwork.models import Profile
+from smartfridge.forms import RegistrationForm, MyProfileForm
+from smartfridge.models import Profile
 from django.db import transaction
 from django.http import HttpResponse, Http404
 from django.db.models import Q
