@@ -86,5 +86,24 @@ def register(request):
 #################### Dummy Data #########################
 dummy_data_1 = {
     'item_name' : 'milk',
-    
+    'expiry_date' : datetime.datetime.now().strftime("%y-%m-%d"),
+    'item_count' : 2,
+}
+
+dummy_data_2 = {
+    'item_name' : 'eggs',
+    'expiry_date' : datetime.datetime.now().strftime("%y-%m-%d"),
+    'item_count' : 8,
+}
+
+dummy_data_3 = {
+    'item_name' : 'yogurt',
+    'expiry_date' : datetime.datetime.now().strftime("%y-%m-%d"),
+    'item_count' : 1,
+}
+
+dummy_data_4 = {
+    'item_name' : 'apples',
+    'expiry_date' : datetime.datetime.now().strftime("%y-%m-%d"),
+    'item_count' : 4,
 }
