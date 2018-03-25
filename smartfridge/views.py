@@ -82,3 +82,9 @@ def register(request):
                             password=form.cleaned_data['password1'])
     login(request, new_user)
     return redirect(reverse('myFridge'))
+
+#################### Dummy Data #########################
+dummy_data_1 = {
+    'item_name' : 'milk',
+    'expiry_date' : 
+}

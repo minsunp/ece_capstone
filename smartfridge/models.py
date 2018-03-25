@@ -5,6 +5,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+
 # Profile model.
 class Profile(models.Model):
     # Take from user input
@@ -15,3 +16,8 @@ class Profile(models.Model):
     content_type = models.CharField(max_length=50, blank=True)
     user_model = models.OneToOneField(User, related_name="user_model")
 
+class Item(models.Model):
+    item_name = models.CharField(max_length=20)
+    expiry_date = models.DateTimeField()
+    item_count = models.IntegerField()
+    # item_img = models.FileField(upload_to="images", blank=True)
