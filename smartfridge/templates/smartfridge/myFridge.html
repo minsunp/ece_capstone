@@ -8,6 +8,7 @@
 
 <!-- Button to open a modal to add new items -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new_item">+</button>
+<p>&nbsp;</p>
 
 <!-- Modal to manually add new items -->
 <div class="modal fade" id="new_item">
@@ -43,9 +44,27 @@
 
 <div class="row">
     <div class="col-*-*">
-        
+        <div class="card bg-light text-dark">
+            <div class="card-header">
+                <p>{{dummy_data_1.item_name}}</p>
+            </div>
+            <div class="card-body">
+                <p>Expiry Date: {{dummy_data_1.expiry_date}}</p>
+                <p>Count: {{dummy_data_1.item_count}}</p>
+            </div>
+        </div>
     </div>
-    <div class="col-*-*"></div>
+    <div class="col-*-*">
+        <div class="card bg-light text-dark">
+            <div class="card-header">
+                <p>{{dummy_data_2.item_name}}</p>
+            </div>
+            <div class="card-body">
+                <p>Expiry Date: {{dummy_data_2.expiry_date}}</p>
+                <p>Count: {{dummy_data_2.item_count}}</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 
