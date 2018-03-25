@@ -86,5 +86,5 @@ def register(request):
 #################### Dummy Data #########################
 dummy_data_1 = {
     'item_name' : 'milk',
-    'expiry_date' : 
+    
 }

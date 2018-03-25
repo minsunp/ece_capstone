@@ -5,9 +5,21 @@
 {% endblock %}
 
 {% block content %}
+
+
 <div class="row">
-    <div class="col-sm-3" style="background-color:lavender;">.col-sm-4</div>
-    <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-4</div>
-    <div class="col-sm-3" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-*-*">
+        <input class="form-control" type="date" id="date-input">
+    </div>
+    <div class="col-*-*"></div>
 </div>
+
+
+<div class="form-group row">
+    <label for="example-date-input" class="col-2 col-form-label">Expiry Date</label>
+    <div class="col-5">
+        <input class="form-control" type="date" id="example-date-input">
+    </div>
+</div>
+
 {% endblock %}
