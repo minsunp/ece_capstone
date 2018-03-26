@@ -92,11 +92,47 @@
     <div class="col-*-*">
         <div class="card bg-light text-dark">
             <div class="card-header">
-                <p>{{dummy_data_2.item_name}}</p>
+                <p class="font-weight-bold text-uppercase">
+                    {{dummy_data_2.item_name}}
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_item" style="float: right">Edit</button>
+                </p>
             </div>
             <div class="card-body">
                 <p>Expiry Date: {{dummy_data_2.expiry_date}}</p>
                 <p>Count: {{dummy_data_2.item_count}}</p>
+                <button type="button" class="btn btn-primary">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-*-*">
+        <div class="card bg-light text-dark">
+            <div class="card-header">
+                <p class="font-weight-bold text-uppercase">
+                    {{dummy_data_3.item_name}}
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_item" style="float: right">Edit</button>
+                </p>
+            </div>
+            <div class="card-body">
+                <p>Expiry Date: {{dummy_data_3.expiry_date}}</p>
+                <p>Count: {{dummy_data_3.item_count}}</p>
+                <button type="button" class="btn btn-primary">Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-*-*">
+        <div class="card bg-light text-dark">
+            <div class="card-header">
+                <p class="font-weight-bold text-uppercase">
+                    {{dummy_data_4.item_name}}
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_item" style="float: right">Edit</button>
+                </p>
+            </div>
+            <div class="card-body">
+                <p>Expiry Date: {{dummy_data_4.expiry_date}}</p>
+                <p>Count: {{dummy_data_4.item_count}}</p>
+                <button type="button" class="btn btn-primary">Buy</button>
             </div>
         </div>
     </div>
