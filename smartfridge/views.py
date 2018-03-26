@@ -35,6 +35,11 @@ def myFridge(request):
 def shopping_list(request):
     context = {}
 
+    context['dummy_data_1'] = dummy_data_1
+    context['dummy_data_2'] = dummy_data_2
+    context['dummy_data_3'] = dummy_data_3
+    context['dummy_data_4'] = dummy_data_4
+    
     return render(request, 'smartfridge/shopping_list.html', context)
 
 @login_required
