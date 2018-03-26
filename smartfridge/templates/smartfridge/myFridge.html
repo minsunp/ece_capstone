@@ -41,19 +41,54 @@
     </div>
 </div>
 
+<!-- Modal to edit item -->
+<div class="modal fade" id="edit_item">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Edit item</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <label for="edit_name">Name</label>
+                <input class="form-control" type="text" id="edit_name">
+                <label for="edit_expiry_date">Expiry Date</label>
+                <input class="form-control" type="date" id="edit_expiry_date">
+                <label for="edit_count">Item Count</label>
+                <input class="form-control" type="number" id="edit_count">
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                {% csrf_token %}
+                <button onclick="editItem()" class="btn btn-primary" data-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="row">
+
     <div class="col-*-*">
         <div class="card bg-light text-dark">
             <div class="card-header">
-                <p>{{dummy_data_1.item_name}}</p>
+                <p class="font-weight-bold text-uppercase">
+                    {{dummy_data_1.item_name}}
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_item" style="float: right">Edit</button>
+                </p>
             </div>
             <div class="card-body">
                 <p>Expiry Date: {{dummy_data_1.expiry_date}}</p>
                 <p>Count: {{dummy_data_1.item_count}}</p>
+                <button type="button" class="btn btn-primary">Buy</button>
             </div>
         </div>
     </div>
+
     <div class="col-*-*">
         <div class="card bg-light text-dark">
             <div class="card-header">
@@ -65,6 +100,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 

@@ -4,3 +4,8 @@
 <h1 class="text-center">Shopping List</h1>
 {% endblock %}
 
+{% block content %}
+<label>Item to add:</label>
+<input id="item" type="text" name="item">
+<button onclick="addShoppingList()">Add item</button>
+{% endblock %}
