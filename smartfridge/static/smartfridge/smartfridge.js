@@ -18,26 +18,17 @@ function addShoppingList(item_name) {
         dataType : "json",
         // If request was successful, run updateShoppingList
         success: function(response) {
-            updateShoppingList(response);
+            showMessage(response);
         }
     });
-    
 }
-
 
 // Add item to shopping list - from shopping list
 function addShopping() {
 }
 
-// Update shopping list page
-function updateShoppingList(response) {
-
-    // Add html to shopping list page
-    $("#shopping_list").append(
-        "<li class='list-group-item'>" +
-            "<input class='form-check-input' type='checkbox' id='check1'>" +
-            "<label class='form-check-label' for='check1'>" + this.name + "</label>" +
-        "</li>");
+// Show a message - notify that the selected item is added to the shopping list
+function showMessage(response) {
 
     // Show message
     $("#myFridge_message").append(
@@ -47,6 +38,29 @@ function updateShoppingList(response) {
                 "<span aria-hidden='true'>&times;</span>" +
             "</button>" +
         "</div>");
+}
+
+// Get all shopping list items - in json format
+function getShoppingList() {
+    $.ajax({
+        url: "/smartfridge/get_shoppingList_json",
+        dataType : "json",
+        success: showShoppingList
+    });
+}
+
+// Display all shopping list items
+function showShoppingList(response) {
+
+    $(response).each(function() {
+        // Add html to shopping list page
+        $("#shopping_list").append(
+            "<li class='list-group-item'>" +
+                "<input class='form-check-input' type='checkbox' id='check1'>" +
+                "<label class='form-check-label' for='check1'>" + this.name + "</label>" +
+            "</li>");
+    });
+    
 }
 
 function getCSRFToken() {
@@ -63,3 +77,5 @@ function getCSRFToken() {
 function displayError(message) {
     $("#error").html(message);
 }
+
+window.onload = getShoppingList;

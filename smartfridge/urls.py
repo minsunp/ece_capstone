@@ -9,6 +9,8 @@ urlpatterns = [
     url(r'^your_recipes$', views.your_recipes, name='your_recipes'),
     url(r'^my_profile$', views.my_profile, name='my_profile'),
     url(r'^add_to_shoppingList$', views.add_to_shoppingList, name='add_to_shoppingList'),
+    url(r'^get_shoppingList_json$', views.get_shoppingList_json, name='get_shoppingList_json'),
+
 
     # Route for built-in authentication with our own custom login page
     url(r'^login$', auth_views.login, {'template_name':'smartfridge/login.html'}, name='login'),

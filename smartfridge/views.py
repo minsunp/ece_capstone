@@ -67,6 +67,19 @@ def add_to_shoppingList(request):
     response_text['count'] = 1
     return HttpResponse(json.dumps(response_text), content_type='application/json')
 
+# Put every item in shopping list into json format
+@login_required
+def get_shoppingList_json(request):
+    shopping_list = []
+    allItems = ShoppingItem.objects.all()
+    for item in allItems:
+        shopping_item = {}
+        shopping_item['name'] = item.name
+        shopping_list.append(shopping_item)
+
+    response_text = json.dumps(shopping_list)
+    return HttpResponse(response_text, content_type='application/json')
+
 @login_required
 def your_recipes(request):
     context = {}
