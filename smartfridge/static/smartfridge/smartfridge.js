@@ -1,5 +1,4 @@
 
-
 function addItem() {
 }
 
@@ -7,15 +6,27 @@ function editItem() {
 }
 
 // Add item to shopping list - from my fridge
-function addShoppingList() {
+function addShoppingList(item_name) {
 
-    alert("does this run");
+    // Send POST request to views.py > add_to_shoppingList()
+    $.ajax({
+        url: "/smartfridge/add_to_shoppingList",
+        type: "POST",
+        // Data to send: send user-added content of post
+        data: "item_name="+item_name+"&csrfmiddlewaretoken="+getCSRFToken(),
+        // Type of data we expect back
+        dataType : "json",
+        // If request was successful, run this function
+        success: function(response) {
+            if (Array.isArray(response)) {
+                updateShoppingList(response);
+            } else {
+                displayError(response.error);
+            }
+        }
+    });
 
-    var item_name = "Milk";
-
-    // Create ShoppingItem model
-    var item = ShoppingItem(name=item_name, count=1);
-    item.save();
+    
 
     // Add html to shopping list page
     $("#shopping_list").append(
@@ -35,6 +46,7 @@ function addShoppingList() {
     
 }
 
+
 // Add item to shopping list - from shopping list
 function addShopping() {
 }
@@ -42,4 +54,19 @@ function addShopping() {
 // Update shopping list page
 function updateShoppingList() {
 
+}
+
+function getCSRFToken() {
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+        if (cookies[i].startsWith("csrftoken=")) {
+            return cookies[i].substring("csrftoken=".length, cookies[i].length);
+        }
+    }
+    return "unknown";
+}
+
+// Put the message in error division
+function displayError(message) {
+    $("#error").html(message);
 }

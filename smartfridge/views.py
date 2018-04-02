@@ -43,6 +43,25 @@ def shopping_list(request):
     return render(request, 'smartfridge/shopping_list.html', context)
 
 @login_required
+def add_to_shoppingList(request):
+
+    # Request is always POST
+    if request.method != 'POST':
+        raise Http404
+
+    # If item_name is blank,
+    if not 'item_name' in request.POST or not request.POST['item_name']:
+        response_text = {}
+        response_text['error'] = 'You must add content to your shopping list'
+        return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+    # Create ShoppingItem model
+    item = ShoppingItem(name=item_name, count=1)
+    item.save()
+
+
+
+@login_required
 def your_recipes(request):
     context = {}
 
