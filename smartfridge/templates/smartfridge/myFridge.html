@@ -6,6 +6,8 @@
 
 {% block content %}
 
+<div id="myFridge_message"></div>
+
 <!-- Button to open a modal to add new items -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#new_item">+</button>
 <p>&nbsp;</p>
@@ -73,28 +75,28 @@
 
 <div class="row">
 
-    <div class="list-group">
+    <div class="col-*-*">
+        <div class="card bg-light text-dark">
 
-        <div class="col-*-*">
-            <div class="card bg-light text-dark">
-                <div class="card-header">
-                    <button type="button" class="list-group-item list-group-item-action">
-                        {{dummy_data_1.item_name}}
-                    </button>
-                </div>
-
-                <div class="card-body">
-                    <p>Expiry Date: {{dummy_data_1.expiry_date}}</p>
-                    <p>Count: {{dummy_data_1.item_count}}</p>
-                    <button type="button" class="btn btn-primary">Buy</button>
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_item">Edit</button>
-                    <button type="button" class="btn btn-danger">X</button>
+            <div class="card-header">
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                        <input type="checkbox" checked autocomplete="off"> {{dummy_data_1.item_name}}
+                    </label>
                 </div>
             </div>
-        </div>
-        <p>&nbsp;</p>
 
+            <div class="card-body">
+                <p>Expiry Date: {{dummy_data_1.expiry_date}}</p>
+                <p>Count: {{dummy_data_1.item_count}}</p>
+                <button type="button" class="btn btn-primary" onclick="addShoppingList()">Buy</button>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_item">Edit</button>
+                <button type="button" class="btn btn-danger">X</button>
+            </div>
+
+        </div>
     </div>
+    <p>&nbsp;</p>
 
 </div>
 

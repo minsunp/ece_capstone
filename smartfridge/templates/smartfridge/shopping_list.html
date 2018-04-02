@@ -8,11 +8,11 @@
 
 <label>Item to add:</label>
 <input id="item" type="text" name="item">
-<button type="button" class="btn btn-primary" onclick="addShoppingList()">Add item</button>
+<button type="button" class="btn btn-primary" onClick="addShopping()">Add item</button>
 
 <p>&nbsp;</p>
 
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush" id="shopping_list">
     <li class="list-group-item">
         <input class="form-check-input" type="checkbox" id="check1">
         <label class="form-check-label" for="check1">{{dummy_data_1.item_name}}</label>

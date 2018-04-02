@@ -16,8 +16,15 @@ class Profile(models.Model):
     content_type = models.CharField(max_length=50, blank=True)
     user_model = models.OneToOneField(User, related_name="user_model")
 
+# Items in the FRIDGE
 class Item(models.Model):
     item_name = models.CharField(max_length=20)
     expiry_date = models.DateTimeField()
     item_count = models.IntegerField()
     # item_img = models.FileField(upload_to="images", blank=True)
+
+# Items in the shopping list
+class ShoppingItem(models.Model):
+    name = models.CharField(max_length=20)
+    count = models.IntegerField()
+
