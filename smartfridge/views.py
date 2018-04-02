@@ -67,6 +67,31 @@ def add_to_shoppingList(request):
     response_text['count'] = 1
     return HttpResponse(json.dumps(response_text), content_type='application/json')
 
+@login_required
+def del_shoppingList(request):
+
+    # Request is always POST
+    if request.method != 'POST':
+        raise Http404
+
+    # If item_id is blank,
+    if not 'item_id' in request.POST or not request.POST['item_id']:
+        response_text = {}
+        response_text['error'] = 'You should select an item to delete'
+        return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+    response_text = {}
+    # Find the ShoppingItem model, and delete it
+    try:
+        item_to_delete = ShoppingItem.objects.get(id=request.POST['item_id'])
+        item_to_delete.delete()
+    except ObjectDoesNotExist:
+        response_text['error'] = "The item did not exist in the Shopping List."
+    
+    # Need to get rid of this part later
+    response_text['id'] = request.POST['item_id']
+    return HttpResponse(json.dumps(response_text), content_type='application/json')
+
 # Put every item in shopping list into json format
 @login_required
 def get_shoppingList_json(request):
@@ -75,6 +100,7 @@ def get_shoppingList_json(request):
     for item in allItems:
         shopping_item = {}
         shopping_item['name'] = item.name
+        shopping_item['item_id'] = item.id
         shopping_list.append(shopping_item)
 
     response_text = json.dumps(shopping_list)
