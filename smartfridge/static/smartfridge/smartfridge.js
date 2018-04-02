@@ -16,23 +16,27 @@ function addShoppingList(item_name) {
         data: "item_name="+item_name+"&csrfmiddlewaretoken="+getCSRFToken(),
         // Type of data we expect back
         dataType : "json",
-        // If request was successful, run this function
+        // If request was successful, run updateShoppingList
         success: function(response) {
-            if (Array.isArray(response)) {
-                updateShoppingList(response);
-            } else {
-                displayError(response.error);
-            }
+            updateShoppingList(response);
         }
     });
-
     
+}
+
+
+// Add item to shopping list - from shopping list
+function addShopping() {
+}
+
+// Update shopping list page
+function updateShoppingList(response) {
 
     // Add html to shopping list page
     $("#shopping_list").append(
         "<li class='list-group-item'>" +
             "<input class='form-check-input' type='checkbox' id='check1'>" +
-            "<label class='form-check-label' for='check1'>" + item_name + "</label>" +
+            "<label class='form-check-label' for='check1'>" + this.name + "</label>" +
         "</li>");
 
     // Show message
@@ -43,17 +47,6 @@ function addShoppingList(item_name) {
                 "<span aria-hidden='true'>&times;</span>" +
             "</button>" +
         "</div>");
-    
-}
-
-
-// Add item to shopping list - from shopping list
-function addShopping() {
-}
-
-// Update shopping list page
-function updateShoppingList() {
-
 }
 
 function getCSRFToken() {

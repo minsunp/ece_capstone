@@ -11,11 +11,14 @@ from django.contrib.auth import login, authenticate
 from django.utils import timezone
 import datetime
 from smartfridge.forms import RegistrationForm, MyProfileForm
-from smartfridge.models import Profile
+from smartfridge.models import Profile, Item, ShoppingItem
 from django.db import transaction
 from django.http import HttpResponse, Http404
 from django.db.models import Q
 from django.views.decorators.csrf import ensure_csrf_cookie
+from django.core import serializers
+import json
+from django.core.serializers.json import DjangoJSONEncoder
 
 # Create your views here.
 
@@ -56,10 +59,13 @@ def add_to_shoppingList(request):
         return HttpResponse(json.dumps(response_text), content_type='application/json')
 
     # Create ShoppingItem model
-    item = ShoppingItem(name=item_name, count=1)
+    item = ShoppingItem(name=request.POST['item_name'], count=1)
     item.save()
-
-
+    # Send the item info to js - to update shopping list page
+    response_text = {}
+    response_text['name'] = request.POST['item_name']
+    response_text['count'] = 1
+    return HttpResponse(json.dumps(response_text), content_type='application/json')
 
 @login_required
 def your_recipes(request):
