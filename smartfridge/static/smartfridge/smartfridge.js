@@ -65,7 +65,7 @@ function showMyFridgeList(response) {
                         "<p>Count: " + this.count + "</p>" + 
                         "<button type='button' class='btn btn-primary' onclick='addShoppingList(" + this.item_id + ")'>Buy</button>" +
                         "<button type='button' class='btn btn-info' data-toggle='modal' data-target='#edit_item'>Edit</button>" +
-                        "<button type='button' class='btn btn-danger'>X</button>" +
+                        "<button type='button' class='btn btn-danger' onclick='delete_myFridge(" + this.item_id + ")'>X</button>" +
                     "</div>" +
 
                 "</div>" +
@@ -88,6 +88,24 @@ function addShoppingList(item_id) {
         // If request was successful
         success: function(response) {
             showMessage_myFridge("Your item has been added to the shopping list");
+        }
+    });
+}
+
+// Delete the selected item to my fridge
+function delete_myFridge(item_id) {
+    // Send POST request to views.py > del_my_fridge()
+    $.ajax({
+        url: "/smartfridge/del_my_fridge",
+        type: "POST",
+        // Data to send: send user-added content of post
+        data: "item_id="+item_id+"&csrfmiddlewaretoken="+getCSRFToken(),
+        // Type of data we expect back
+        dataType : "json",
+        // If request was successful, run updateShoppingList
+        success: function(response) {
+            showMessage_myFridge("Selected item has been deleted");
+            getMyFridgeList(response);
         }
     });
 }
@@ -203,3 +221,5 @@ function displayError(message) {
 
 window.onload = getShoppingList;
 window.onload = getMyFridgeList;
+//window.setInterval(getMyFridgeList, 5000);
+//window.setInterval(getShoppingList, 5000);

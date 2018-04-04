@@ -19,6 +19,7 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.core import serializers
 import json
 from django.core.serializers.json import DjangoJSONEncoder
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
@@ -68,6 +69,30 @@ def add_myFridge(request):
     response_text['expiry_date'] = request.POST['expiry_date']
     response_text['count'] = request.POST['count']
     # print(json.dumps(response_text))
+    return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+@login_required
+def del_my_fridge(request):
+    # Request is always POST
+    if request.method != 'POST':
+        raise Http404
+
+    # If item_id is blank,
+    if not 'item_id' in request.POST or not request.POST['item_id']:
+        response_text = {}
+        response_text['error'] = 'You should select an item to delete'
+        return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+    response_text = {}
+    # Find the Item model, and delete it
+    try:
+        item_to_delete = Item.objects.get(id=request.POST['item_id'])
+        item_to_delete.delete()
+    except ObjectDoesNotExist:
+        response_text['error'] = "The item did not exist in the My Fridge List."
+    
+    # Need to get rid of this part later
+    response_text['id'] = request.POST['item_id']
     return HttpResponse(json.dumps(response_text), content_type='application/json')
 
 @login_required
