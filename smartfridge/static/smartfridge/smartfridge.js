@@ -21,22 +21,21 @@ function addItem() {
         url: "/smartfridge/add_myFridge",
         type: "POST",
         // Data to send: send user-added content of new item
-        data: "name="+name+"expiry_date"+expiry_date+"count"+count+"&csrfmiddlewaretoken="+getCSRFToken(),
+        data: "name="+name+"&expiry_date="+expiry_date+"&count="+count+"&csrfmiddlewaretoken="+getCSRFToken(),
         // Type of data we expect back
         dataType : "json",
         // If request was successful
         success: function(response) {
             showMessage_myFridge("Your item has been added to My Fridge");
-            getMyFridgeList();
+            getMyFridgeList(response);
         }
     });
 }
 
 function editItem() {
-    var elem;
 }
 
-function getMyFridgeList() {
+function getMyFridgeList(response) {
     $.ajax({
         url: "/smartfridge/get_myFridgeList_json",
         dataType : "json",
@@ -63,26 +62,27 @@ function showMyFridgeList(response) {
 
                     "<div class='card-body'>" +
                         "<p>Expiry Date: " + this.expiry_date + "</p>" +
-                        "<p>Count: " + this.count + "</p>" +
-                        "<button type='button' class='btn btn-primary' onclick='addShoppingList(" + this.name + ")>Buy</button>" +
+                        "<p>Count: " + this.count + "</p>" + 
+                        "<button type='button' class='btn btn-primary' onclick='addShoppingList(" + this.item_id + ")'>Buy</button>" +
                         "<button type='button' class='btn btn-info' data-toggle='modal' data-target='#edit_item'>Edit</button>" +
                         "<button type='button' class='btn btn-danger'>X</button>" +
                     "</div>" +
 
                 "</div>" +
             "</div>" +
-            "<p>&nbsp;</p>"});
+            "<p>&nbsp;</p>");
+    });
 }
 
 // Add item to shopping list - from my fridge
-function addShoppingList(item_name) {
+function addShoppingList(item_id) {
 
     // Send POST request to views.py > add_to_shoppingList()
     $.ajax({
         url: "/smartfridge/add_to_shoppingList",
         type: "POST",
         // Data to send: send user-added content of new item
-        data: "item_name="+item_name+"&csrfmiddlewaretoken="+getCSRFToken(),
+        data: "item_id="+item_id+"&csrfmiddlewaretoken="+getCSRFToken(),
         // Type of data we expect back
         dataType : "json",
         // If request was successful
@@ -102,7 +102,7 @@ function addShopping() {
 
     // Send POST request to views.py > add_to_shoppingList()
     $.ajax({
-        url: "/smartfridge/add_to_shoppingList",
+        url: "/smartfridge/add_to_shoppingList_from_shopping",
         type: "POST",
         // Data to send: send user-added content of post
         data: "item_name="+item+"&csrfmiddlewaretoken="+getCSRFToken(),
@@ -111,7 +111,7 @@ function addShopping() {
         // If request was successful
         success: function(response) {
             showMessage_shoppingList("Your item has been added to the shopping list");
-            getShoppingList();
+            getShoppingList(response);
         }
     });
 }
@@ -161,7 +161,7 @@ function showMessage_shoppingList(message) {
 }
 
 // Get all shopping list items - in json format
-function getShoppingList() {
+function getShoppingList(response) {
     $.ajax({
         url: "/smartfridge/get_shoppingList_json",
         dataType : "json",
@@ -202,3 +202,4 @@ function displayError(message) {
 }
 
 window.onload = getShoppingList;
+window.onload = getMyFridgeList;

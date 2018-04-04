@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^del_shoppingList$', views.del_shoppingList, name='del_shoppingList'),
     url(r'^add_myFridge$', views.add_myFridge, name='add_myFridge'),
     url(r'^get_myFridgeList_json$', views.get_myFridgeList_json, name='get_myFridgeList_json'),
+    url(r'^add_to_shoppingList_from_shopping$', views.add_to_shoppingList_from_shopping, name='add_to_shoppingList_from_shopping'),
 
     # Route for built-in authentication with our own custom login page
     url(r'^login$', auth_views.login, {'template_name':'smartfridge/login.html'}, name='login'),

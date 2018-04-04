@@ -36,6 +36,7 @@ def myFridge(request):
 
 @login_required
 def add_myFridge(request):
+    print("this should run")
     # Request is always POST
     if request.method != 'POST':
         raise Http404
@@ -66,6 +67,7 @@ def add_myFridge(request):
     response_text['name'] = request.POST['name']
     response_text['expiry_date'] = request.POST['expiry_date']
     response_text['count'] = request.POST['count']
+    # print(json.dumps(response_text))
     return HttpResponse(json.dumps(response_text), content_type='application/json')
 
 @login_required
@@ -75,8 +77,8 @@ def get_myFridgeList_json(request):
     for item in allItems:
         myFridge_item = {}
         myFridge_item['name'] = item.item_name
-        myFridge_item['expiry_date'] = item.expiry_date
-        myFridge_item['count'] = item.item_count
+        myFridge_item['expiry_date'] = str(item.expiry_date)
+        myFridge_item['count'] = str(item.item_count)
         myFridge_item['item_id'] = item.id
         myFridge_list.append(myFridge_item)
 
@@ -104,6 +106,29 @@ def add_to_shoppingList(request):
         raise Http404
 
     # If item_name is blank,
+    if not 'item_id' in request.POST or not request.POST['item_id']:
+        response_text = {}
+        response_text['error'] = 'You must add content to your shopping list'
+        return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+    # Create ShoppingItem model
+    item_model = Item.objects.get(id=request.POST['item_id'])
+    item = ShoppingItem(name=item_model.item_name, count=1)
+    item.save()
+    # Send the item info to js - to update shopping list page
+    response_text = {}
+    response_text['name'] = item_model.item_name
+    response_text['count'] = 1
+    return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+@login_required
+def add_to_shoppingList_from_shopping(request):
+
+    # Request is always POST
+    if request.method != 'POST':
+        raise Http404
+
+    # If item_name is blank,
     if not 'item_name' in request.POST or not request.POST['item_name']:
         response_text = {}
         response_text['error'] = 'You must add content to your shopping list'
@@ -117,7 +142,7 @@ def add_to_shoppingList(request):
     response_text['name'] = request.POST['item_name']
     response_text['count'] = 1
     return HttpResponse(json.dumps(response_text), content_type='application/json')
-
+    
 @login_required
 def del_shoppingList(request):
 
