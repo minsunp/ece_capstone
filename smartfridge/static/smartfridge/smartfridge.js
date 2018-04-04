@@ -1,8 +1,77 @@
 
+/**************** My Fridge ***********************/
+
+// Manually add item to my fridge
 function addItem() {
+    // Get all inputs from modal
+    var name_element = $("#name");
+    var expiry_date_element = $("#expiry_date");
+    var count_element = $("#count");
+    var name = name_element.val();
+    var expiry_date = expiry_date_element.val();
+    var count = count_element.val();
+    name_element.val('');
+    expiry_date_element.val('');
+    count_element.val('');
+    // Close the modal
+    $("#new_item").modal('toggle');
+
+    // Send POST request to views.py > add_myFridge()
+    $.ajax({
+        url: "/smartfridge/add_myFridge",
+        type: "POST",
+        // Data to send: send user-added content of new item
+        data: "name="+name+"expiry_date"+expiry_date+"count"+count+"&csrfmiddlewaretoken="+getCSRFToken(),
+        // Type of data we expect back
+        dataType : "json",
+        // If request was successful
+        success: function(response) {
+            showMessage_myFridge("Your item has been added to My Fridge");
+            getMyFridgeList();
+        }
+    });
 }
 
 function editItem() {
+    var elem;
+}
+
+function getMyFridgeList() {
+    $.ajax({
+        url: "/smartfridge/get_myFridgeList_json",
+        dataType : "json",
+        success: showMyFridgeList
+    });
+}
+
+function showMyFridgeList(response) {
+    $(".col-*-*").remove(); // remove all previous items
+
+    $(response).each(function() {
+        // Add html for an item to my fridge page
+        $("#fridge_items").append(
+            "<div class='col-*-*'>" + 
+                "<div class='card bg-light text-dark'>" +
+
+                    "<div class='card-header'>" +
+                        "<div class='btn-group-toggle' data-toggle='buttons'>" +
+                            "<label class='btn btn-primary active'>" +
+                                "<input type='checkbox' checked autocomplete='off'>" + this.name +
+                            "</label>" +
+                        "</div>" +
+                    "</div>" +
+
+                    "<div class='card-body'>" +
+                        "<p>Expiry Date: " + this.expiry_date + "</p>" +
+                        "<p>Count: " + this.count + "</p>" +
+                        "<button type='button' class='btn btn-primary' onclick='addShoppingList(" + this.name + ")>Buy</button>" +
+                        "<button type='button' class='btn btn-info' data-toggle='modal' data-target='#edit_item'>Edit</button>" +
+                        "<button type='button' class='btn btn-danger'>X</button>" +
+                    "</div>" +
+
+                "</div>" +
+            "</div>" +
+            "<p>&nbsp;</p>"});
 }
 
 // Add item to shopping list - from my fridge
@@ -12,16 +81,18 @@ function addShoppingList(item_name) {
     $.ajax({
         url: "/smartfridge/add_to_shoppingList",
         type: "POST",
-        // Data to send: send user-added content of post
+        // Data to send: send user-added content of new item
         data: "item_name="+item_name+"&csrfmiddlewaretoken="+getCSRFToken(),
         // Type of data we expect back
         dataType : "json",
-        // If request was successful, run updateShoppingList
+        // If request was successful
         success: function(response) {
-            showMessage_myFridge(response);
+            showMessage_myFridge("Your item has been added to the shopping list");
         }
     });
 }
+
+/********************* Shopping List **************************/
 
 // Add item to shopping list - inside the shopping list
 function addShopping() {
@@ -37,10 +108,10 @@ function addShopping() {
         data: "item_name="+item+"&csrfmiddlewaretoken="+getCSRFToken(),
         // Type of data we expect back
         dataType : "json",
-        // If request was successful, run updateShoppingList
+        // If request was successful
         success: function(response) {
             showMessage_shoppingList("Your item has been added to the shopping list");
-            getShoppingList(response);
+            getShoppingList();
         }
     });
 }
@@ -58,18 +129,18 @@ function del_shoppingItem(item_id) {
         // If request was successful, run updateShoppingList
         success: function(response) {
             showMessage_shoppingList("Selected item has been deleted");
-            getShoppingList(response);
+            getShoppingList();
         }
     });
 }
 
 // Show a message - notify that the selected item is added to the shopping list
-function showMessage_myFridge(response) {
+function showMessage_myFridge(message) {
 
     // Show message
     $("#myFridge_message").append(
         "<div class='alert alert-warning alert-dismissible fade show' role='alert'>" + 
-            "Your item has been added to the shopping list" +
+            message +
             "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>" +
                 "<span aria-hidden='true'>&times;</span>" +
             "</button>" +
@@ -112,6 +183,8 @@ function showShoppingList(response) {
             "</li>");
     });
 }
+
+/******************** The Rest *************************/
 
 function getCSRFToken() {
     var cookies = document.cookie.split(";");

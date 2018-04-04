@@ -22,7 +22,7 @@ from django.core.serializers.json import DjangoJSONEncoder
 
 # Create your views here.
 
-##################### Pages ###########################
+##################### My Fridge ###########################
 @login_required
 def myFridge(request):
     context = {}
@@ -33,6 +33,57 @@ def myFridge(request):
     context['dummy_data_4'] = dummy_data_4
 
     return render(request, 'smartfridge/myFridge.html', context)
+
+@login_required
+def add_myFridge(request):
+    # Request is always POST
+    if request.method != 'POST':
+        raise Http404
+
+    # If name is blank,
+    if not 'name' in request.POST or not request.POST['name']:
+        response_text = {}
+        response_text['error'] = 'You must add name to your new item'
+        return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+    # If expiry_date is blank,
+    if not 'expiry_date' in request.POST or not request.POST['expiry_date']:
+        response_text = {}
+        response_text['error'] = 'You must add expiry date to your new item'
+        return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+    # If count is blank,
+    if not 'count' in request.POST or not request.POST['count']:
+        response_text = {}
+        response_text['error'] = 'You must add count to new item'
+        return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+    # Create Item model
+    item = Item(item_name=request.POST['name'], expiry_date=request.POST['expiry_date'], item_count=request.POST['count'])
+    item.save()
+    # Send the item info to js - to update my fridge page - need to get rid of this later
+    response_text = {}
+    response_text['name'] = request.POST['name']
+    response_text['expiry_date'] = request.POST['expiry_date']
+    response_text['count'] = request.POST['count']
+    return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+@login_required
+def get_myFridgeList_json(request):
+    myFridge_list = []
+    allItems = Item.objects.all()
+    for item in allItems:
+        myFridge_item = {}
+        myFridge_item['name'] = item.item_name
+        myFridge_item['expiry_date'] = item.expiry_date
+        myFridge_item['count'] = item.item_count
+        myFridge_item['item_id'] = item.id
+        myFridge_list.append(myFridge_item)
+
+    response_text = json.dumps(myFridge_list)
+    return HttpResponse(response_text, content_type='application/json')
+
+##################### Shopping List ###########################
 
 @login_required
 def shopping_list(request):
@@ -106,11 +157,15 @@ def get_shoppingList_json(request):
     response_text = json.dumps(shopping_list)
     return HttpResponse(response_text, content_type='application/json')
 
+##################### Your Recipes ###########################
+
 @login_required
 def your_recipes(request):
     context = {}
 
     return render(request, 'smartfridge/your_recipes.html', context)
+
+##################### My Profile ###########################
 
 @login_required
 def my_profile(request):
