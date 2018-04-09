@@ -45,7 +45,7 @@ function getMyFridgeList(response) {
 
 function showMyFridgeList(response) {
     $(".col-*-*").remove(); // remove all previous items
-
+ 
     $(response).each(function() {
         // Add html for an item to my fridge page
         $("#fridge_items").append(
