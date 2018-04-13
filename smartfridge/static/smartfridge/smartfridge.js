@@ -44,12 +44,12 @@ function getMyFridgeList(response) {
 }
 
 function showMyFridgeList(response) {
-    $(".col-*-*").remove(); // remove all previous items
+    $(".col-3-3").remove(); // remove all previous items
  
     $(response).each(function() {
         // Add html for an item to my fridge page
         $("#fridge_items").append(
-            "<div class='col-*-*'>" + 
+            "<div class='col-3-3'>" + 
                 "<div class='card bg-light text-dark'>" +
 
                     "<div class='card-header'>" +
@@ -129,7 +129,7 @@ function addShopping() {
         // If request was successful
         success: function(response) {
             showMessage_shoppingList("Your item has been added to the shopping list");
-            getShoppingList(response);
+            getShoppingList();
         }
     });
 }
@@ -146,8 +146,8 @@ function del_shoppingItem(item_id) {
         dataType : "json",
         // If request was successful, run updateShoppingList
         success: function(response) {
-            showMessage_shoppingList("Selected item has been deleted");
             getShoppingList();
+            showMessage_shoppingList("Selected item has been deleted");
         }
     });
 }
@@ -179,7 +179,7 @@ function showMessage_shoppingList(message) {
 }
 
 // Get all shopping list items - in json format
-function getShoppingList(response) {
+function getShoppingList() {
     $.ajax({
         url: "/smartfridge/get_shoppingList_json",
         dataType : "json",
@@ -221,5 +221,5 @@ function displayError(message) {
 
 window.onload = getShoppingList;
 window.onload = getMyFridgeList;
-//window.setInterval(getMyFridgeList, 5000);
-//window.setInterval(getShoppingList, 5000);
+window.setInterval(getMyFridgeList, 5000);
+window.setInterval(getShoppingList, 5000);
