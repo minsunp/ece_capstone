@@ -82,7 +82,7 @@ def receive_barcode(request, barcode):
     print(str(name))
 
     # Display the received item name on my fridge
-    item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%y-%m-%d"), item_count=1)
+    item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
     item.save()
     return render(request, 'smartfridge/myFridge.html', context)
 
