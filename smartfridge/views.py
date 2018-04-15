@@ -25,6 +25,7 @@ import pandas as pd
 # Create your views here.
 
 ##################### My Fridge ###########################
+@ensure_csrf_cookie
 @login_required
 def myFridge(request):
     context = {}
