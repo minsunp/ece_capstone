@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 
 from django.shortcuts import render, redirect, get_object_or_404
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
@@ -20,7 +20,8 @@ from django.core import serializers
 import json
 from django.core.serializers.json import DjangoJSONEncoder
 from django.core.exceptions import ObjectDoesNotExist
- 
+import pandas as pd
+
 # Create your views here.
 
 ##################### My Fridge ###########################
@@ -70,6 +71,14 @@ def add_myFridge(request):
     response_text['count'] = request.POST['count']
     # print(json.dumps(response_text))
     return HttpResponse(json.dumps(response_text), content_type='application/json')
+
+@login_required
+def receive_barcode(request, barcode):
+    context = {}
+    print(barcode)  #print(request.GET["barcode"])
+    dataframe = pd.read_csv("./Grocery_UPC_Database.csv", delimiter=',',)
+    print(str((dataframe.loc[dataframe['upc12'] == int(barcode)])['name']))
+    return render(request, 'smartfridge/myFridge.html', context)
 
 @login_required
 def del_my_fridge(request):
