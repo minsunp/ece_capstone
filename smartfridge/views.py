@@ -73,12 +73,17 @@ def add_myFridge(request):
     # print(json.dumps(response_text))
     return HttpResponse(json.dumps(response_text), content_type='application/json')
 
-@login_required
+#@login_required
 def receive_barcode(request, barcode):
     context = {}
     print(barcode)  #print(request.GET["barcode"])
     dataframe = pd.read_csv("./Grocery_UPC_Database.csv", delimiter=',',)
-    print(str((dataframe.loc[dataframe['upc12'] == int(barcode)])['name']))
+    name = (dataframe.loc[dataframe['upc12'] == int(barcode)])['name']
+    print(str(name))
+
+    # Display the received item name on my fridge
+    item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%y-%m-%d"), item_count=1)
+    item.save()
     return render(request, 'smartfridge/myFridge.html', context)
 
 @login_required
