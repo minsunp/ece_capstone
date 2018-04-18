@@ -230,10 +230,14 @@ import os
 @login_required
 def your_recipes(request):
     context = {}
+    print("1");
     mypath = os.path.dirname(os.path.abspath(__file__))
+    print("2");
     with open(mypath + "/templates/smartfridge/sample_recipe.html") as fp:
         soup = BeautifulSoup(fp)
+    print("3");
     recipe_name = soup.find_all(class_='recipe-summary__h1')
+    print("4");
     context['recipe_name'] = recipe_name
     return render(request, 'smartfridge/your_recipes.html', context)
 

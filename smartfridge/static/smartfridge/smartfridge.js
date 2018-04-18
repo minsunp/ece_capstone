@@ -69,7 +69,6 @@ function showMyFridgeList(response) {
                     "</div>" +
 
                 "</div>" +
-                "<p>&nbsp;</p>" +
             "</div>");
     });
 }
