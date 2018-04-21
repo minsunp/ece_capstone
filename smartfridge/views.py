@@ -77,7 +77,9 @@ def add_myFridge(request):
 def receive_barcode(request, barcode):
     context = {}
     print(barcode)  #print(request.GET["barcode"])
-    dataframe = pd.read_csv("./Grocery_UPC_Database.csv", delimiter=',',)
+    # mypath = os.path.dirname(os.path.abspath(__file__))
+    #with open(mypath + "/templates/smartfridge/sample_recipe.html")
+    dataframe = pd.read_csv("../Grocery_UPC_Database.csv", delimiter=',',)
     name = (dataframe.loc[dataframe['upc12'] == int(barcode)])['name']
     print(str(name))
 
@@ -230,14 +232,10 @@ import os
 @login_required
 def your_recipes(request):
     context = {}
-    print("1");
     mypath = os.path.dirname(os.path.abspath(__file__))
-    print("2");
     with open(mypath + "/templates/smartfridge/sample_recipe.html") as fp:
         soup = BeautifulSoup(fp)
-    print("3");
     recipe_name = soup.find_all(class_='recipe-summary__h1')
-    print("4");
     context['recipe_name'] = recipe_name
     return render(request, 'smartfridge/your_recipes.html', context)
 
