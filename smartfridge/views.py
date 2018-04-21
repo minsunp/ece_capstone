@@ -83,12 +83,15 @@ def receive_barcode(request, barcode):
     #with open(mypath + "/templates/smartfridge/sample_recipe.html")
 
     dataframe = pd.read_csv(mypath + "/../Grocery_UPC_Database.csv", delimiter=',',)
-    name = (dataframe.loc[dataframe['upc12'] == int(barcode)]).iloc[0]['name']
-    print(str(name))
+    try:
+        name = (dataframe.loc[dataframe['upc12'] == int(barcode)]).iloc[0]['name']
+        print(str(name))
 
     # Display the received item name on my fridge
-    item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
-    item.save()
+        item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+        item.save()
+    except:
+        pass
     return render(request, 'smartfridge/myFridge.html', context)
 
 @login_required
