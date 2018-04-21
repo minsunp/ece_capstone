@@ -21,6 +21,7 @@ import json
 from django.core.serializers.json import DjangoJSONEncoder
 from django.core.exceptions import ObjectDoesNotExist
 import pandas as pd
+import os
 
 # Create your views here.
 
@@ -77,9 +78,11 @@ def add_myFridge(request):
 def receive_barcode(request, barcode):
     context = {}
     print(barcode)  #print(request.GET["barcode"])
-    # mypath = os.path.dirname(os.path.abspath(__file__))
+    
+    mypath = os.path.dirname(os.path.abspath(__file__))
     #with open(mypath + "/templates/smartfridge/sample_recipe.html")
-    dataframe = pd.read_csv("../Grocery_UPC_Database.csv", delimiter=',',)
+
+    dataframe = pd.read_csv(mypath + "/../Grocery_UPC_Database.csv", delimiter=',',)
     name = (dataframe.loc[dataframe['upc12'] == int(barcode)])['name']
     print(str(name))
 
@@ -227,7 +230,6 @@ def get_shoppingList_json(request):
 ##################### Your Recipes ###########################
 
 from bs4 import BeautifulSoup
-import os
 
 @login_required
 def your_recipes(request):
