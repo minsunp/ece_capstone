@@ -243,6 +243,7 @@ def your_recipes(request):
     with open(mypath + "/templates/smartfridge/sample_recipe.html") as fp:
         soup = BeautifulSoup(fp)
         recipe_name = soup.find_all(class_='recipe-summary__h1')
+        #recipe_name = soup.find_all(class_='navbar-brand')
     context['recipe_name'] = recipe_name
     return render(request, 'smartfridge/your_recipes.html', context)
 
