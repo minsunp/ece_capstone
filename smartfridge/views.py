@@ -83,17 +83,17 @@ def receive_barcode(request, barcode):
     #with open(mypath + "/templates/smartfridge/sample_recipe.html")
 
     dataframe = pd.read_csv(mypath + "/../Grocery_UPC_Database.csv", delimiter=',',)
-    name = (dataframe.loc[[0]]).iloc[0]['name']
+    #name = (dataframe.loc[[0]]).iloc[0]['name']
     try:
         name = (dataframe.loc[dataframe['upc12'] == int(barcode)]).iloc[0]['name']
         print(str(name))
+        item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+        item.save()
 
     # Display the received item name on my fridge
-    
     except:
         pass
-    item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
-    item.save()
+    
     return render(request, 'smartfridge/myFridge.html', context)
 
 @login_required
@@ -242,7 +242,8 @@ def your_recipes(request):
     mypath = os.path.dirname(os.path.abspath(__file__))
     with open(mypath + "/templates/smartfridge/sample_recipe.html") as fp:
         soup = BeautifulSoup(fp)
-        recipe_name = soup.find_all(class_='recipe-summary__h1')
+        #recipe_name = soup.find_all(class_='recipe-summary__h1')
+        recipe_name = soup.find_all(class_='recipe-hed')
         #recipe_name = soup.find_all(class_='navbar-brand')
     context['recipe_name'] = recipe_name
     return render(request, 'smartfridge/your_recipes.html', context)
