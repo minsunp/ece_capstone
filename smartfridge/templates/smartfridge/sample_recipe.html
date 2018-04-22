@@ -40,7 +40,7 @@
 
 
     
-    <link href='https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/recipe-details-init-css.bundled.Css' rel='stylesheet'/>
+    <link href='https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/recipe-details-init-css.bundled.Css' rel='stylesheet'/>
 
 
 
@@ -51,7 +51,7 @@
     <meta property="fb:app_id" content="66102450266" />
     <meta property="fb:pages" content="71158748377" />
 
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"55db0cb698","applicationID":"117742538","transactionName":"YwABYUUDXUIABRZbCVpKIllbEFZSCBYHQTFRBxBcQwccYwQFC0IDdwoNQUUNX10EFExgA1cME1B+DFdUGU5L","queueTime":0,"applicationTime":77,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQ4OVVdaGwIBU1ZWBQQEXg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"55db0cb698","applicationID":"117742538","transactionName":"YwABYUUDXUIABRZbCVpKIllbEFZSCBYHQTFRBxBcQwccYwQFC0IDdwoNQUUNX10EFExgA1cME1B+DFdUGU5L","queueTime":0,"applicationTime":79,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQ4OVVdaGwIBU1ZWBQQEXg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
 
         <!-- Begin comScore Tag - Part 1 -->
         <script id="script_comscore">
@@ -153,7 +153,7 @@
             };
         };
     </script>
-        <meta name="correlationId" content="7b3af62b-ba52-49a8-9291-4e20338558e7" />
+        <meta name="correlationId" content="29597928-6935-4c38-81e9-4f92aeffe74e" />
             <script>
             (function (d) {
                 var e = d.createElement('script');
@@ -303,10 +303,10 @@
                     ar-touchstart="touchStart($event)" ar-touchend="touchEnd($event)" unselectable="on" onselectstart="return false;">
 
                     <li ng-repeat="ingredient in search.ingredientsInclude">
-						<span>
-							<span ng-bind="::ingredient"></span>
-							<span class="icon--x ignore-ar-touchstart ignore-ar-touchend" ng-click="removeIngredientInclude(ingredient, $event)" unsubscribe-global-click-handler>&#x2715;</span>
-						</span>
+                        <span>
+                            <span ng-bind="::ingredient"></span>
+                            <span class="icon--x ignore-ar-touchstart ignore-ar-touchend" ng-click="removeIngredientInclude(ingredient, $event)" unsubscribe-global-click-handler>&#x2715;</span>
+                        </span>
                     </li>
 
                 </ul>
@@ -334,7 +334,7 @@
 
                     <li ng-repeat="ingredient in search.ingredientsExclude">
                         <span class="exclude-item">
-							<span ng-bind="::ingredient"></span>
+                            <span ng-bind="::ingredient"></span>
                             <span class="icon--x ignore-ar-touchstart ignore-ar-touchend" ng-click="removeIngredientExclude(ingredient, $event)" unsubscribe-global-click-handler>&#x2715;</span>
                         </span>
                     </li>
@@ -802,7 +802,7 @@
             </li>
 
             <li ng-click="setAnalyticsData('dinner spinner tv')">
-                <a href="http://allrecipes.com/DinnerSpinnerTV/" id="navmenu_tv" rel="noopener">
+                <a href="http://dish.allrecipes.com/dinner-spinner-tv-show/" id="navmenu_tv" rel="noopener">
                     <span class="icon svg-icon--top-nav-bar--tv_icon svg-icon--top-nav-bar--tv_icon-dims"></span>
                     <span>Dinner Spinner TV</span>
                 </a>
@@ -909,9 +909,9 @@
                 mention_category: "",
                 mention: "",
                 channel: "chicken",                
-                "status": "visitor",
-                "oid": "2D657D74850781AC-6000010500000922",
-                "fit": "0",
+                "status": "unrecognized",
+                "oid": "",
+                "fit": "1",
                 "r": "254940",
                 "id": "254940",
                 "k": [13,39,53,94,125,127,150,195,201,221,241,252,552,625]
@@ -923,7 +923,6 @@
     })();    
 
 </script>
-
 <div class="recipe-container-outer">
     <section class="ar_recipe_index full-page" itemscope itemtype="http://schema.org/Recipe">
         <link itemprop="url" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/" />
@@ -1007,6 +1006,22 @@
                     <div class="icon-photoPage photo-strip">
                         <ul class="photo-strip__items">
 
+                            
+                                <li>
+                                    
+
+
+<span data-ng-controller="ar_controllers_photo_upload" ng-init="init(0,254940, null, 'recipePhoto','Recipe',3857583)" class="photo-upload" ng-click="enablePhotoUpload(false)">
+    <input type="file" class="photo-upload__input" id="photoUpload" ng-file-select="onFileSelect($files)" disabled="disabled">
+    <label for="photoUpload" class="photo-upload__label">
+        <img class="imageBlur" src="https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg" role="presentation">
+        <span class="add-photo">
+            <span class="svg-icon--recipe-page--addphoto svg-icon--recipe-page--addphoto-dims"></span>
+        </span>
+    </label>
+    <ar-notification></ar-notification>
+</span>
+                                </li>
 
                                 <li>
                                     <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '3857583','Recipe')">
@@ -1016,9 +1031,31 @@
 
                                 </li>
                                 <li>
+                                    <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '5319355','Recipe')">
+                                        <img src="https://images.media-allrecipes.com/userphotos/125x70/5319355.jpg">
+
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '5303161','Recipe')">
+                                        <img src="https://images.media-allrecipes.com/userphotos/125x70/5303161.jpg">
+
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '5303047','Recipe')">
+                                        <img src="https://images.media-allrecipes.com/userphotos/125x70/5303047.jpg">
+
+                                    </a>
+
+                                </li>
+                                <li>
                                     <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '5297590','Recipe')">
                                         <img src="https://images.media-allrecipes.com/userphotos/125x70/5297590.jpg">
 
+                                            <span class="picture-count">33</span>
                                     </a>
 
                                 </li>
@@ -1036,28 +1073,6 @@
                                     </a>
 
                                 </li>
-                                <li>
-                                    <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '5264153','Recipe')">
-                                        <img src="https://images.media-allrecipes.com/userphotos/125x70/5264153.jpg">
-
-                                    </a>
-
-                                </li>
-                                <li>
-                                    <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '5259637','Recipe')">
-                                        <img src="https://images.media-allrecipes.com/userphotos/125x70/5259637.jpg">
-
-                                            <span class="picture-count">30</span>
-                                    </a>
-
-                                </li>
-                                <li>
-                                    <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" title="See Recipe Pictures" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg', '5255299','Recipe')">
-                                        <img src="https://images.media-allrecipes.com/userphotos/125x70/5255299.jpg">
-
-                                    </a>
-
-                                </li>
                                                     </ul>
                     </div>
                 </div>
@@ -1068,13 +1083,13 @@
 
 
 <section class="recipe-summary clearfix">
-    <meta property="og:rating" content="4.47572803497314" />
+    <meta property="og:rating" content="4.44347810745239" />
     <meta property="og:rating_scale" content="5" />
     <div id="karma-lazy-sponsorLogo" class="recipe-summary__logo"></div>
     <h1 class="recipe-summary__h1" itemprop="name">Honey Garlic Chicken with Rosemary</h1>
     <!--rating stars-->
     <div class="recipe-summary__stars">
-        <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars= 4.47572803497314 >
+        <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars= 4.44347810745239 >
         <img height="20" width="20" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
         <img height="20" width="20" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
         <img height="20" width="20" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
@@ -1082,23 +1097,23 @@
         <img height="20" width="20" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/half-star-2015.svg" role="presentation"/>
 </div>
         <span itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="aggregate-rating">
-            <meta itemprop="ratingValue" content="4.48">
-            <meta itemprop="reviewCount" content="83">
+            <meta itemprop="ratingValue" content="4.44">
+            <meta itemprop="reviewCount" content="90">
         </span>
     </div>
     <!-- total made it count & read review link -->
     <div class="summary-stats-box">
-        <div class="total-made-it" ng-cloak data-ng-show="show" data-ng-controller="ar_controllers_recipe_summary" data-ng-init="init(567,254940,null)">
+        <div class="total-made-it" ng-cloak data-ng-show="show" data-ng-controller="ar_controllers_recipe_summary" data-ng-init="init(633,254940,null)">
             <span ng-controller="ar_controllers_recipe_reviews" ng-init="init(254940, 2, 9, 'Recipe', 5, 'MostHelpful')">
 
                     <a class="read--reviews" ng-click="$event.preventDefault();reviewModalDialog(0, sortBy)" target="_self" aria-label="Read Review Details">
                         <span class="made-it-count" ng-bind="totalRecipeMadeCount |largeNumberDisplay"></span><span>&nbsp;made it</span><span>&nbsp; |&nbsp;</span>
-                        <span class="review-count">83 reviews</span>
+                        <span class="review-count">90 reviews</span>
                     </a>
             </span>
             <span ng-controller="ar_controllers_recipe_photo" ng-hide="showplayer">
                     <a href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/photos/3857583/" class="icon-photoPage-link" ng-click="$event.preventDefault(); openGalery(null, 254940, 'Honey Garlic Chicken with Rosemary', 'https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg, null', Recipe)">
-                        <span>&nbsp; | &nbsp;</span><span class="picture-count-link"><format-large-number number="30"></format-large-number> photos</span>
+                        <span>&nbsp; | &nbsp;</span><span class="picture-count-link"><format-large-number number="33"></format-large-number> photos</span>
                     </a>
                
             </span>
@@ -1109,7 +1124,7 @@
     <div class="submitter">
             <div class="submitter__img">
                     <a href="https://www.allrecipes.com/cook/730746/"><img class="img-profile img-profile--submitter" src="https://images.media-allrecipes.com/userphotos/50x50/2711772.jpg" alt="Linette Gall Kalbach" title="Linette Gall Kalbach" /></a>
-                <span><span class="icon--cook-card-follower" title="Followers"></span><span><format-large-number number="6"></format-large-number></span></span>
+                <span><span class="icon--cook-card-follower" title="Followers"></span><span><format-large-number number="9"></format-large-number></span></span>
             </div>
         <p>
             <span class="submitter__byline">Recipe by: </span><span class="submitter__name" itemprop="author">Linette Gall Kalbach</span>
@@ -1160,11 +1175,11 @@
         </a>
 
         <a class="pinterest-btn" href="#" ng-click="socialShareNavigate('http://pinterest.com/pin/create/button/?url=https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/?lnkid=usspnt&amp;media=https://images.media-allrecipes.com/userphotos/250x250/3857583.jpg&amp;description=Honey%20Garlic%20Chicken%20with%20Rosemary%20-%20Allrecipes.com', '_blank', PinterestTargetParams);" aria-label="Share Recipe on Pinterest.com">
-            <span class="icon"></span><span class="social-btn-text">Pin</span>
+            <span class="svg-icon--social--pinterest_color svg-icon--social--pinterest_color-dims"></span><span class="social-btn-text">Pin</span>
         </a>
 
         <a class="facebook-btn" href="#" ng-click="socialShareNavigate('https://facebook.com/sharer.php?u=https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/?lnkid=ussfac', '_blank', FacebookTargetParams);" aria-label="Share Recipe on Facebook.com">
-            <span class="icon"></span><span class="social-btn-text">Share</span>
+            <span class="svg-icon--social--facebook_color svg-icon--social--facebook_color-dims"></span><span class="social-btn-text">Share</span>
         </a>
     </section>
 </div>
@@ -1227,7 +1242,7 @@
             <span class="measurement-title">Metric</span>
         </li>
     </ul>
-	<div id="msg-directions" style="display:none;">Note:  Recipe directions are for original size.</div>
+    <div id="msg-directions" style="display:none;">Note:  Recipe directions are for original size.</div>
 </section>
 
 
@@ -1552,7 +1567,7 @@
 <script>
     var userInformation =
         {
-            clientIp: '71.61.178.164'
+            clientIp: '128.2.149.6'
         };
 </script>
 
@@ -1707,7 +1722,7 @@
 </section>
 
 
-<div data-ng-controller="ar_controllers_made_it" data-ng-init="init(254940, 0, '', '', 0, 0, 0, 567)">
+<div data-ng-controller="ar_controllers_made_it" data-ng-init="init(254940, 0, '', '', 0, 0, 0, 633)">
     <!-- made recipe toolbar -->
     <section id="recipe-toolbar" class="recipe-toolbar">
         <!-- photo upload block -->
@@ -1744,575 +1759,122 @@
 
     <section class="email-recipe">
         <form name="emailForm" ng-submit="sendEmail('254940', 'Recipe')" novalidate>
-			<section class="show-form ng-hide" ng-cloak ng-show="showForm">
+            <section class="show-form ng-hide" ng-cloak ng-show="showForm">
 
-				<div class="input-wrap">
-					<input type="email" placeholder="{{::emailPlaceholderText}}" name="txtEmail"
-						   ng-model="toEmailAddress" class="ng-valid-email" ng-focus="hideAds(); AddEmailEnabled = true;" ng-blur="showAds()">
-					<a class="btn-basic--small" ng-show="AddEmailEnabled" ng-click="addEmail()">Add</a>
-				</div>
-				<ol class="email-recipe__recipients">
-					<li ng-repeat="email in toEmailList">
-						<a class="btn-basic--small btn-gold"><span ng-bind="email.address"></span><span class="icon--x" ng-click="deleteEmail(email.address)"></span></a>
-	</li>
-				</ol>
-				
+                <div class="input-wrap">
+                    <input type="email" placeholder="{{::emailPlaceholderText}}" name="txtEmail"
+                           ng-model="toEmailAddress" class="ng-valid-email" ng-focus="hideAds(); AddEmailEnabled = true;" ng-blur="showAds()">
+                    <a class="btn-basic--small" ng-show="AddEmailEnabled" ng-click="addEmail()">Add</a>
+                </div>
+                <ol class="email-recipe__recipients">
+                    <li ng-repeat="email in toEmailList">
+                        <a class="btn-basic--small btn-gold"><span ng-bind="email.address"></span><span class="icon--x" ng-click="deleteEmail(email.address)"></span></a>
+    </li>
+                </ol>
+                
 
 
-				<div class="email-recipe__buttons">
-					<a class="btns-two-small" ng-click="cancel()">Cancel</a>
-					<input class="btns-two-small" type="submit" value="Send">
-					<span ng-bind="errorMessage"></span>
-				</div>
+                <div class="email-recipe__buttons">
+                    <a class="btns-two-small" ng-click="cancel()">Cancel</a>
+                    <input class="btns-two-small" type="submit" value="Send">
+                    <span ng-bind="errorMessage"></span>
+                </div>
 
-			</section>
+            </section>
         </form>
     </section>
 </section>
 
+
 <section class="similar-recipes--details" id="grid_recipeListItems" ng-controller="ar_controller_similar_recipes" ng-init="init()" ng-cloak>
-    <h2 class="heading__h2--gutters similar notPhoneView">Similar: <span><a href="" ng-class="{ active: isSet(1) }" ng-click="setTab(1, 'recipes')">Recipes</a><a href="" ng-class="{ active: isSet(2) }" ng-click="setTab(2, 'videos')">Videos</a><a href="" ng-class="{ active: isSet(3) }" ng-click="setTab(3, 'categories')">Categories</a><a href="" ng-class="{ active: isSet(4) }" ng-click="setTab(4, 'articles')">Articles</a></span></h2>
-    
-    <h2 class="heading__h2--gutters similar phoneView" popup-trigger="similar-content-nav">
-        Similar: <span class="selected-content">{{title}}<span class="icon--chevron-down"></span></span>
-        <span popup-panel="similar-content-nav" class="similar-content-nav ng-hide">
-                <a href="" ng-class="{ active: isSet(1) }" ng-click="setTab(1, 'recipes')">recipes</a>
-                            <a href="" ng-class="{ active: isSet(2) }" ng-click="setTab(2, 'videos')">videos</a>
-                            <a href="" ng-class="{ active: isSet(3) }" ng-click="setTab(3, 'categories')">categories</a>
-                            <a href="" ng-class="{ active: isSet(4) }" ng-click="setTab(4, 'articles')">articles</a>
-        </span>
-    </h2>
+    <h2 class="heading__h2--gutters similar">Similar <span>recipes</span></h2>
 
-    <div class="similar-recipes__wrap">
-        <!--navigation for carousel -->
-        <div class="carousel-navigation">
-            <a carousel-scroll-left="similarRecipes" ng-if="similarRecipes_atLeftBound===false">
-                <div class="icon--chevron-left"></div>
-            </a>
-            <a carousel-scroll-right="similarRecipes" ng-if="similarRecipes_atRightBound===false">
-                <div class="icon--chevron-right"></div>
-            </a>
-        </div>
+        <div class="recipe-carousel" id="similarRecipes">
+                <div class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
+                    <ar-save-item class='favorite similar' data-id="79521" data-type="'Recipe'" data-name="&quot;Slow Cooker Honey Garlic Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/86439.jpg'"></ar-save-item>
+                    <a href="https://www.allrecipes.com/recipe/79521/slow-cooker-honey-garlic-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_1" referring-id="254940">
+                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/86439.jpg" alt="Slow Cooker Honey Garlic Chicken Recipe - Chicken thighs cooked in the slow cooker with a sweet, tangy sauce." title="Slow Cooker Honey Garlic Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
+                        <h3 class="slider-card__h3">Slow Cooker Honey Garlic Chicken</h3>
+                    </a>
+                    <a href="">
+                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
+                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="3.9300000667572"></span>
 
-        <div class="similar-recipes__container">
-            <div id="scrollDiv" carousel-scroll-target="similarRecipes" scroll-event>
-                <div id="insideScroll" class="grid slider">
-
-                    <ul class="recipe-carousel" id="similarRecipes" ng-show="isSet(1)">
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="79521" data-type="'Recipe'" data-name="&quot;Slow Cooker Honey Garlic Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/86439.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/79521/slow-cooker-honey-garlic-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_1" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/86439.jpg" alt="Slow Cooker Honey Garlic Chicken Recipe - Chicken thighs cooked in the slow cooker with a sweet, tangy sauce." title="Slow Cooker Honey Garlic Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Slow Cooker Honey Garlic Chicken</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="3.9300000667572"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="3.93">
-                                                <span class="grid-col__reviews"><format-large-number number="316"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="8844" data-type="'Recipe'" data-name="&quot;Easy Garlic and Rosemary Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/553456.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/8844/easy-garlic-and-rosemary-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_2" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/553456.jpg" alt="Easy Garlic and Rosemary Chicken Recipe - Lemon, rosemary and garlic are an ideal flavor blend in this quick chicken bake." title="Easy Garlic and Rosemary Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Easy Garlic and Rosemary Chicken</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="3.8199999332428"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="3.82">
-                                                <span class="grid-col__reviews"><format-large-number number="153"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="8951" data-type="'Recipe'" data-name="&quot;Orange Honey Garlic Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/260056.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/8951/orange-honey-garlic-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_3" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/260056.jpg" alt="Orange Honey Garlic Chicken Recipe - Baked chicken in a slightly sweet, slightly tangy herbed orange-soy marinade." title="Orange Honey Garlic Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Orange Honey Garlic Chicken</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="4.05000019073486"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="4.05">
-                                                <span class="grid-col__reviews"><format-large-number number="137"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="235165" data-type="'Recipe'" data-name="&quot;Roasted Orange Rosemary Honey Glazed Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/1085205.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/235165/roasted-orange-rosemary-honey-glazed-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_4" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/1085205.jpg" alt="Roasted Orange Rosemary Honey Glazed Chicken Recipe - Chicken legs, roasted with an orange rosemary honey glaze, are fall-off-the-bone juicy and great for dinner parties." title="Roasted Orange Rosemary Honey Glazed Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Roasted Orange Rosemary Honey Glazed ...</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4-5" data-scroll-to-anchor="reviews" data-ratingstars="4.32999992370605"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="4.33">
-                                                <span class="grid-col__reviews"><format-large-number number="82"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="235089" data-type="'Recipe'" data-name="&quot;Garlic and Basil Baked Chicken Thighs&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/1060991.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/235089/garlic-and-basil-baked-chicken-thighs/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_5" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/1060991.jpg" alt="Garlic and Basil Baked Chicken Thighs Recipe - Garlic and basil baked chicken thighs are easy to put together and goes quite nicely with a side of rice." title="Garlic and Basil Baked Chicken Thighs"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Garlic and Basil Baked Chicken Thighs</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="4.05000019073486"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="4.05">
-                                                <span class="grid-col__reviews"><format-large-number number="63"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="232335" data-type="'Recipe'" data-name="&quot;Honey Garlic Chicken Wings&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/1077723.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/232335/honey-garlic-chicken-wings/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_6" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/1077723.jpg" alt="Honey Garlic Chicken Wings Recipe - Marinating the chicken wings overnight in a mixture of honey, soy sauce, brown sugar, and mustard powder gives these oven-baked appetizer favorites plenty of flavor." title="Honey Garlic Chicken Wings"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Honey Garlic Chicken Wings</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4-5" data-scroll-to-anchor="reviews" data-ratingstars="4.48000001907349"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="4.48">
-                                                <span class="grid-col__reviews"><format-large-number number="49"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="254939" data-type="'Recipe'" data-name="&quot;Easy Honey Garlic Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/3875871.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/254939/easy-honey-garlic-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_7" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/3875871.jpg" alt="Easy Honey Garlic Chicken Recipe - Ready in about 1 hour, this easy dinner recipe coats chicken drumsticks in a honey garlic sauce made with Dijon mustard and orange juice." title="Easy Honey Garlic Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Easy Honey Garlic Chicken</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="3.75"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="3.75">
-                                                <span class="grid-col__reviews"><format-large-number number="6"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="231940" data-type="'Recipe'" data-name="&quot;Honey Nut Dipped Chicken &quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/1081705.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/231940/honey-nut-dipped-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_8" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/1081705.jpg" alt="Honey Nut Dipped Chicken  Recipe - Chicken pieces are marinated in a sweet and tangy honey mixture, then coated with corn flake crumbs and nuts and baked until golden brown." title="Honey Nut Dipped Chicken "  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Honey Nut Dipped Chicken </h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="4"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="4.00">
-                                                <span class="grid-col__reviews"><format-large-number number="4"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="261994" data-type="'Recipe'" data-name="&quot;Easy Slow Cooker Chicken Thighs with Honey&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/4684149.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/261994/easy-slow-cooker-chicken-thighs-with-honey/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_9" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/4684149.jpg" alt="Easy Slow Cooker Chicken Thighs with Honey Recipe - In this easy slow cooker recipe, chicken thighs are quickly browned on the stove and then cooked in the slow cooker with honey and mustard." title="Easy Slow Cooker Chicken Thighs with Honey"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Easy Slow Cooker Chicken Thighs with ...</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4-5" data-scroll-to-anchor="reviews" data-ratingstars="4.5"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="4.50">
-                                                <span class="grid-col__reviews"><format-large-number number="2"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
-                                <div class="slider-card__recipes">
-                                    <ar-save-item class='favorite' data-id="256867" data-type="'Recipe'" data-name="&quot;Honey Garlic Chicken Wraps&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/4520694.jpg'"></ar-save-item>
-                                    <a href="https://www.allrecipes.com/recipe/256867/honey-garlic-chicken-wraps/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_10" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/4520694.jpg" alt="Honey Garlic Chicken Wraps Recipe - Your kids will love these simple honey garlic chicken wraps filled with rice and raw carrots that are quick and easy to make on a weeknight." title="Honey Garlic Chicken Wraps"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
-                                        <h3 class="slider-card__h3">Honey Garlic Chicken Wraps</h3>
-                                    </a>
-                                    <a href="">
-                                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
-                                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="4"></span>
-
-                                            <span class="aggregate-rating">
-                                                <meta content="4.00">
-                                                <span class="grid-col__reviews"><format-large-number number="1"></format-large-number></span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                    </ul>
-
-                    <ul class="video-carousel" id="relatedVideos" ng-show="isSet(2)">
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/910/baked-garlic-parmesan-chicken/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_1" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/ee3f113e-c702-4bf6-a4d2-7952947900eb/a630d22f-c781-43b2-bf48-e56d66730502/1280x720/match/image.jpg" alt="Baked Garlic Parmesan Chicken Recipe and Video - See how to make an easy weeknight chicken dish that's a 5-star favorite." title="Baked Garlic Parmesan Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/910/baked-garlic-parmesan-chicken/"></span>
-                                        <h3 class="slider-card__h3">Baked Garlic Parmesan Chicken</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="773555"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/1073/garlic-chicken/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_2" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/9f37699e-a10a-4393-8bc1-97c845f3c172/7bd3cd64-081f-453f-89f8-2aeda62aaa81/1280x720/match/image.jpg" alt="Garlic Chicken Recipe and Video - This easy, tasty dish is perfect for a weeknight dinner." title="Garlic Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/1073/garlic-chicken/"></span>
-                                        <h3 class="slider-card__h3">Garlic Chicken</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="209896"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/1221/garlic-cheddar-chicken/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_3" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/c6f974ae-500f-4e7f-b5c4-d317238dddfd/1e274ae0-9103-4bd7-bfd6-0c3cdb504c9e/1280x720/match/image.jpg" alt="Garlic Cheddar Chicken Recipe and Video - See how to make a simple, top-rated baked chicken recipe." title="Garlic Cheddar Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/1221/garlic-cheddar-chicken/"></span>
-                                        <h3 class="slider-card__h3">Garlic Cheddar Chicken</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="156636"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/1483/easy-garlic-broiled-chicken/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_4" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/f5774167-3a0e-4bfc-8c5b-01d35eeaab9b/a34c6aae-bd4b-414d-9283-ad68f4905086/1280x720/match/image.jpg" alt="Easy Garlic Broiled Chicken Recipe and Video - This delicious dish is ready in less than 30 minutes." title="Easy Garlic Broiled Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/1483/easy-garlic-broiled-chicken/"></span>
-                                        <h3 class="slider-card__h3">Easy Garlic Broiled Chicken</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="176463"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/2895/roast-chicken-with-rosemary/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_5" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/a5ed335e-20c1-48d3-98f9-62f4c5e63017/45ae6a5c-5492-4d4a-83f2-ebc8b1285173/1280x720/match/image.jpg" alt="Roast Chicken with Rosemary Recipe and Video - Watch how to make this Italian-inspired recipe." title="Roast Chicken with Rosemary"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/2895/roast-chicken-with-rosemary/"></span>
-                                        <h3 class="slider-card__h3">Roast Chicken with Rosemary</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="75766"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/2974/a-good-easy-garlic-chicken/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_6" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/f354cd94-1287-4257-9d9b-acb64ca5506a/be1b0a8a-4864-430e-9eda-88bf9eca39e2/1280x720/match/image.jpg" alt="A Good Easy Garlic Chicken Recipe and Video - See how to make incredibly quick-and-easy garlic chicken." title="A Good Easy Garlic Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/2974/a-good-easy-garlic-chicken/"></span>
-                                        <h3 class="slider-card__h3">A Good Easy Garlic Chicken</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="196960"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/4018/chicken-with-20-cloves-of-garlic/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_7" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/bfaa064d-1675-4bac-bf56-3cff9119800a/0b153af1-9992-49e2-bd46-9ace869b4192/1280x720/match/image.jpg" alt="Chicken with 20 Cloves of Garlic Recipe and Video - See how to make baked chicken in a pungent garlic sauce." title="Chicken with 20 Cloves of Garlic"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/4018/chicken-with-20-cloves-of-garlic/"></span>
-                                        <h3 class="slider-card__h3">Chicken with 20 Cloves of Garlic</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="158977"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/4241/crispy-rosemary-chicken-and-fries/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_8" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/6d477247-6a45-4b88-b55d-a5aed0c40651/2b7dc927-542d-4dad-9641-2f5137f7a593/1280x720/match/image.jpg" alt="Crispy Rosemary Chicken and Fries Recipe and Video - A complete, one-pan meal that’s in the oven in just 15 minutes." title="Crispy Rosemary Chicken and Fries"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/4241/crispy-rosemary-chicken-and-fries/"></span>
-                                        <h3 class="slider-card__h3">Crispy Rosemary Chicken and Fries</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="194513"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/4578/honey-baked-chicken-ii/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_9" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/c3e44d63-d6e8-4b06-89b6-333e448f46d8/4477e75a-3af2-492b-882e-2d31bb1c0465/1280x720/match/image.jpg" alt="Honey Baked Chicken II Recipe and Video - Honey, mustard, and curry create a simple, sweet-and-savory baked chicken." title="Honey Baked Chicken II"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/4578/honey-baked-chicken-ii/"></span>
-                                        <h3 class="slider-card__h3">Honey Baked Chicken II</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="223272"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar video')">
-                                <div class="slider-card__videos">
-                                    <a href="https://www.allrecipes.com/video/7541/roasted-chicken-with-lemon-and-rosemary/" data-internal-referrer-link="similar_video_banner" data-click-id="simslot_10" referring-id="254940">
-                                        <img class="slider-card__videos videoImg" data-lazy-load data-original-src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/1033249144001/bf6458bb-348d-4120-84d8-3b02e8fbc1ad/9aa90ca9-4967-4e60-9a60-9ea02061e306/1280x720/match/image.jpg" alt="Roasted Chicken with Lemon and Rosemary Recipe and Video - Bright, citrusy, herbed and comforting chicken dinner." title="Roasted Chicken with Lemon and Rosemary"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedVideos" />
-                                        <span class="icon--videoplay-small" href="https://www.allrecipes.com/video/7541/roasted-chicken-with-lemon-and-rosemary/"></span>
-                                        <h3 class="slider-card__h3">Roasted Chicken with Lemon and Ros...</h3>
-                                        <div class="counts-div">
-                                            <span class="svg-icon--actions--playcount_grey svg-icon--actions--playcount_grey-dims"></span>
-                                            <span class="counts-text"><format-large-number number="54933"></format-large-number> plays </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                    </ul>
-
-                    <ul class="hub-carousel" id="relatedCategories" ng-show="isSet(3)">
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/661/meat-and-poultry/chicken/chicken-thighs/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_1" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/17166.jpg" alt="" title="Chicken Thighs"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Chicken Thighs</h3>
-                                        <div class="hub-recipeCount">422 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/1954/meat-and-poultry/chicken/baked-and-roasted/thighs/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_2" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/2649248.jpg" alt="" title="Baked Chicken Thighs"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Baked Chicken Thighs</h3>
-                                        <div class="hub-recipeCount">135 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/664/meat-and-poultry/chicken/baked-and-roasted/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_3" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/4539284.jpg" alt="" title="Baked and Roasted Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Baked and Roasted Chicken</h3>
-                                        <div class="hub-recipeCount">1548 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/1642/everyday-cooking/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_4" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/1002311.jpg" alt="" title="Everyday Cooking"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Everyday Cooking</h3>
-                                        <div class="hub-recipeCount">41205 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/80/main-dish/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_5" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/4504937.jpg" alt="" title="Main Dishes"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Main Dishes</h3>
-                                        <div class="hub-recipeCount">17199 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_6" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/1175766.jpg" alt="" title="Recipes"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Recipes</h3>
-                                        <div class="hub-recipeCount">66668 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/1804/healthy-recipes/low-sodium/main-dishes/chicken/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_7" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/7662.jpg" alt="" title="Low-Sodium Chicken Main Dishes"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Low-Sodium Chicken Main Dishes</h3>
-                                        <div class="hub-recipeCount">280 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/1072/ingredients/herbs-and-spices/herbs/rosemary/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_8" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/1020510.jpg" alt="" title="Rosemary"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Rosemary</h3>
-                                        <div class="hub-recipeCount">304 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/17726/everyday-cooking/more-meal-ideas/45-minute-meals/chicken/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_9" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/838741.jpg" alt="" title="45-Minute Chicken Main Dishes"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">45-Minute Chicken Main Dishes</h3>
-                                        <div class="hub-recipeCount">525 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
-                                <div class="slider-card__hub">
-                                    <a href="https://www.allrecipes.com/recipes/17739/everyday-cooking/quick-and-easy/main-dishes/chicken/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_10" referring-id="254940">
-                                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/885940.jpg" alt="" title="Quick and Easy Chicken Dinners"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedCategories" />
-                                        <h3 class="slider-card__h3">Quick and Easy Chicken Dinners</h3>
-                                        <div class="hub-recipeCount">781 recipes</div>
-                                    </a>
-                                </div>
-                            </li>
-                    </ul>
-
-                    <ul class="article-carousel" id="relatedArticles" ng-show="isSet(4)">
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/cutting-up-a-whole-chicken" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_1" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/7592.jpg" alt="Cutting Up a Whole Chicken" title="Cutting Up a Whole Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Cutting Up a Whole Chicken</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/deboning-a-chicken-breast" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_2" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/7425.jpg" alt="Deboning a Chicken Breast" title="Deboning a Chicken Breast"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Deboning a Chicken Breast</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/deboning-a-chicken-thigh" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_3" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/7542.jpg" alt="Deboning a Chicken Thigh" title="Deboning a Chicken Thigh"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Deboning a Chicken Thigh</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/peeling-garlic" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_4" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/41716.jpg" alt="Peeling Garlic" title="Peeling Garlic"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Peeling Garlic</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/rotisserie-chicken-jump-starts-snazzy-meals" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_5" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/41728.jpg" alt="Rotisserie Chicken Jump-starts Snazzy Meals" title="Rotisserie Chicken Jump-starts Snazzy Meals"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Rotisserie Chicken Jump-starts Sna...</h3>
-                                        <span class="article-author">By: Pam Anderson</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/roasting-chicken" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_6" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/6936.jpg" alt="Roasting Chicken" title="Roasting Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Roasting Chicken</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/perfect-fried-chicken" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_7" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/18886.jpg" alt="Perfect Fried Chicken" title="Perfect Fried Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Perfect Fried Chicken</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/honey-guide" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_8" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/23691.jpg" alt="Honey Guide" title="Honey Guide"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Honey Guide</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/finger-lickin-chicken-dippers" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_9" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/14811.jpg" alt="Finger-Lickin' Chicken Dippers" title="Finger-Lickin' Chicken Dippers"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Finger-Lickin' Chicken Dippers</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="slider-card" ng-click="setAnalyticsCookie('similar article')">
-                                <div class="slider-card__articles">
-                                    <a href="https://www.allrecipes.com/HowTo/top-chicken-dinners-for-spring" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_10" referring-id="254940">
-                                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/42568.jpg" alt="Top Chicken Dinners for Spring" title="Top Chicken Dinners for Spring"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="relatedArticles" />
-                                        <h3 class="slider-card__h3">Top Chicken Dinners for Spring</h3>
-                                        <span class="article-author">By: Allrecipes Staff</span>
-                                    </a>
-                                </div>
-                            </li>
-                    </ul>
+                            <span class="aggregate-rating">
+                                <meta content="3.93">
+                                <span class="grid-col__reviews"><format-large-number number="316"></format-large-number></span>
+                            </span>
+                        </div>
+                    </a>
                 </div>
-            </div>
+                <div class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
+                    <ar-save-item class='favorite similar' data-id="8844" data-type="'Recipe'" data-name="&quot;Easy Garlic and Rosemary Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/553456.jpg'"></ar-save-item>
+                    <a href="https://www.allrecipes.com/recipe/8844/easy-garlic-and-rosemary-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_2" referring-id="254940">
+                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/553456.jpg" alt="Easy Garlic and Rosemary Chicken Recipe - Lemon, rosemary and garlic are an ideal flavor blend in this quick chicken bake." title="Easy Garlic and Rosemary Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
+                        <h3 class="slider-card__h3">Easy Garlic and Rosemary Chicken</h3>
+                    </a>
+                    <a href="">
+                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
+                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="3.8199999332428"></span>
+
+                            <span class="aggregate-rating">
+                                <meta content="3.82">
+                                <span class="grid-col__reviews"><format-large-number number="153"></format-large-number></span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
+                    <ar-save-item class='favorite similar' data-id="8951" data-type="'Recipe'" data-name="&quot;Orange Honey Garlic Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/260056.jpg'"></ar-save-item>
+                    <a href="https://www.allrecipes.com/recipe/8951/orange-honey-garlic-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_3" referring-id="254940">
+                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/260056.jpg" alt="Orange Honey Garlic Chicken Recipe - Baked chicken in a slightly sweet, slightly tangy herbed orange-soy marinade." title="Orange Honey Garlic Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
+                        <h3 class="slider-card__h3">Orange Honey Garlic Chicken</h3>
+                    </a>
+                    <a href="">
+                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
+                            <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="4.05000019073486"></span>
+
+                            <span class="aggregate-rating">
+                                <meta content="4.05">
+                                <span class="grid-col__reviews"><format-large-number number="137"></format-large-number></span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="slider-card" ng-click="setAnalyticsCookie('similar recipe')">
+                    <ar-save-item class='favorite similar' data-id="235165" data-type="'Recipe'" data-name="&quot;Roasted Orange Rosemary Honey Glazed Chicken&quot;" data-imageurl="'https://images.media-allrecipes.com/userphotos/150x150/1085205.jpg'"></ar-save-item>
+                    <a href="https://www.allrecipes.com/recipe/235165/roasted-orange-rosemary-honey-glazed-chicken/" data-internal-referrer-link="similar_recipe_banner" data-click-id="simslot_4" referring-id="254940">
+                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/150x150/1085205.jpg" alt="Roasted Orange Rosemary Honey Glazed Chicken Recipe - Chicken legs, roasted with an orange rosemary honey glaze, are fall-off-the-bone juicy and great for dinner parties." title="Roasted Orange Rosemary Honey Glazed Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
+                        <h3 class="slider-card__h3">Roasted Orange Rosemary Honey Glazed ...</h3>
+                    </a>
+                    <a href="">
+                        <div class="slider-card__ratings" data-scroll-to-anchor="reviews">
+                            <span class="stars stars-4-5" data-scroll-to-anchor="reviews" data-ratingstars="4.34000015258789"></span>
+
+                            <span class="aggregate-rating">
+                                <meta content="4.34">
+                                <span class="grid-col__reviews"><format-large-number number="84"></format-large-number></span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="slider-card" ng-click="setAnalyticsCookie('similar categories')">
+                    <a href="https://www.allrecipes.com/recipes/661/meat-and-poultry/chicken/chicken-thighs/" target="_self" data-internal-referrer-link="similar_category_banner" data-click-id="simslot_5" referring-id="254940">
+                        <img class="slider-card__img hub" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/136x136/815964.jpg" alt="" title="Chicken Thighs"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
+                        <h3 class="slider-card__h3">Chicken Thighs</h3>
+                        <div class="hub-recipeCount">426 recipes</div>
+                    </a>
+                </div>
+
+                <div class="slider-card" ng-click="setAnalyticsCookie('similar article')">
+                    <a href="https://www.allrecipes.com/HowTo/cutting-up-a-whole-chicken" data-internal-referrer-link="similar_article_banner" data-click-id="simslot_6" referring-id="254940">
+                        <img class="slider-card__img" data-lazy-load data-original-src="https://images.media-allrecipes.com/images/7592.jpg" alt="Cutting Up a Whole Chicken" title="Cutting Up a Whole Chicken"  src="https://images.media-allrecipes.com/ar/spacer.gif" data-container="similarRecipes" />
+                        <h3 class="slider-card__h3">Cutting Up a Whole Chicken</h3>
+                        <span class="article-author">By: Allrecipes Staff</span>
+                    </a>
+                </div>
         </div>
-    </div>
 </section>
 
         <div class="mag-cta-mobile">
@@ -2330,7 +1892,7 @@
         </div>
 
 <script>
-    var reviewsInitialSet = {"recipeId":254940,"recipeTitle":"Honey Garlic Chicken with Rosemary","recipeImageUrl":"https://images.media-allrecipes.com/userphotos/250x250/3857583.jpg","heroImage":"https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg","reviews":{"MostHelpfulPositive":{"text":"Great for busy family; easy prep with few ingredients. I broiled for last few minutes in oven to crisp n brown chicken. Also,  I poured off the juice into saucepan on stove on high heat, mixed 1/4c milk n 2T cornstarch in  small bowl, then added that once juice boiled. Boil until desired thickness of sauce, then pour over now-rested chicken.","rating":5.0,"reviewID":5610523,"helpfulCount":41,"dateLastModified":"September 20, 2016","submitter":{"userID":20440377,"name":"Beach Mama","profileUrl":"/cook/20440377/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":465,"madeRecipesCount":1,"city":null,"region":null}},"MostHelpfulNegative":{"text":"This was ok, not special or something I will add to my regular rotation made as written. The picture is misleading in that it shows a crispy skin and the recipe states skinless. The sauce was flavorful but runny, not sticky. Everybody ate it. No complaints, but no raves either. If I make it again, it will be with major changes that render it a different recipe.  BTW, why in the world are there so many reviews by folks who have not made the recipe? It skews the rating & is a disservice to fellow cooks who want to try it. I wish Allrecipes would screen & eliminate these reviews.","rating":3.0,"reviewID":6084655,"helpfulCount":10,"dateLastModified":"March 15, 2018","submitter":{"userID":2918010,"name":"BJS","profileUrl":"/cook/2918010/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":1,"favoritesCount":1940,"madeRecipesCount":98,"city":null,"region":null}},"MostPositiveIndex":1,"MostCriticalIndex":4,"Reviews":[{"text":"Great for busy family; easy prep with few ingredients. I broiled for last few minutes in oven to crisp n brown chicken. Also,  I poured off the juice into saucepan on stove on high heat, mixed 1/4c milk n 2T cornstarch in  small bowl, then added that once juice boiled. Boil until desired thickness of sauce, then pour over now-rested chicken.","rating":5.0,"reviewID":5610523,"helpfulCount":41,"dateLastModified":"September 20, 2016","submitter":{"userID":20440377,"name":"Beach Mama","profileUrl":"/cook/20440377/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":465,"madeRecipesCount":1,"city":null,"region":null}},{"text":"I love recipes that are this delicious and require minimal time, effort and ingredients! I browned my chicken thighs on the stove with a bit of oil first, then poured the sauce over top and put in the oven for 25 min. I used 1 clove of minced garlic instead of powdered. Family loved it, even my picky 6 year old.","rating":5.0,"reviewID":5766951,"helpfulCount":19,"dateLastModified":"February 14, 2017","submitter":{"userID":2105613,"name":"Andria Shilliday","profileUrl":"/cook/2105613/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":53,"madeRecipesCount":8,"city":null,"region":null}},{"text":"I made this using the recipe as directed, except I also added some lime juice to cut the sweetness down. I used chicken thighs with skin on and dipped them into the mixture and placed in a cast iron skillet. I then poured the sauce over the thighs. I baked at 375 for 45 minutes because the thighs were large and then broiled for a few minutes until the skin was crispy.","rating":4.0,"reviewID":6036064,"helpfulCount":15,"dateLastModified":"January 12, 2018","submitter":{"userID":2466051,"name":"John Williams","profileUrl":"/cook/2466051/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/userphotos/90x90/125012.jpg"}]},"followersCount":8,"favoritesCount":94,"madeRecipesCount":13,"city":null,"region":null}},{"text":"This was ok, not special or something I will add to my regular rotation made as written. The picture is misleading in that it shows a crispy skin and the recipe states skinless. The sauce was flavorful but runny, not sticky. Everybody ate it. No complaints, but no raves either. If I make it again, it will be with major changes that render it a different recipe.  BTW, why in the world are there so many reviews by folks who have not made the recipe? It skews the rating & is a disservice to fellow cooks who want to try it. I wish Allrecipes would screen & eliminate these reviews.","rating":3.0,"reviewID":6084655,"helpfulCount":10,"dateLastModified":"March 15, 2018","submitter":{"userID":2918010,"name":"BJS","profileUrl":"/cook/2918010/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":1,"favoritesCount":1940,"madeRecipesCount":98,"city":null,"region":null}},{"text":"Simple and delicious! Wasn't sure if I was supposed to use fresh or dried rosemary (doesn't specify), so I used dried (a little less than called for, b/c like I said, I wasn't sure) and that worked out great. The whole family enjoyed this. I used some skinless legs too for the kids. A definite keeper~YUM! Thanks for sharing. :)","rating":5.0,"reviewID":5593156,"helpfulCount":8,"dateLastModified":"August 31, 2016","submitter":{"userID":2945555,"name":"Christina","profileUrl":"/cook/christina/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/userphotos/90x90/4996346.jpg"}]},"followersCount":6707,"favoritesCount":3066,"madeRecipesCount":2619,"city":null,"region":null}},{"text":"The five stars are for the ease of the recipe.\nThe next is the end results  of everyone loved it. Even my picky chicken eaters(those breast people)loved it; so I knew I had a hit. Will be doing it again,thanks.","rating":5.0,"reviewID":6035892,"helpfulCount":6,"dateLastModified":"January 12, 2018","submitter":{"userID":4296810,"name":"Kcooks","profileUrl":"/cook/4296810/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":1564,"madeRecipesCount":4,"city":null,"region":null}},{"text":"I loved this recipe- I had on hand all the ingredients and only had to get the chicken!  The only advice I have is to cook the chicken at a little lower temperature for a longer amount of time so that it's well cooked- tasted great!!","rating":5.0,"reviewID":5981694,"helpfulCount":4,"dateLastModified":"November 18, 2017","submitter":{"userID":21259348,"name":"DanDan","profileUrl":"/cook/21259348/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":58,"madeRecipesCount":23,"city":null,"region":null}},{"text":"So good!  I followed the instructions as written, but with 5 skinless chicken breasts.  Turned out wonderful over a bed of steamed rice!","rating":5.0,"reviewID":5872378,"helpfulCount":4,"dateLastModified":"June 25, 2017","submitter":{"userID":15877010,"name":"Kari","profileUrl":"/cook/15877010/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/userphotos/90x90/3928593.jpg"}]},"followersCount":1,"favoritesCount":5,"madeRecipesCount":12,"city":null,"region":null}},{"text":"Easy to follow recipe. Taste very good.  Worth the try!","rating":5.0,"reviewID":5795432,"helpfulCount":4,"dateLastModified":"March 14, 2017","submitter":{"userID":7231847,"name":"MyzB","profileUrl":"/cook/7231847/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":67,"madeRecipesCount":2,"city":null,"region":null}}]},"totalReviews":83};
+    var reviewsInitialSet = {"recipeId":254940,"recipeTitle":"Honey Garlic Chicken with Rosemary","recipeImageUrl":"https://images.media-allrecipes.com/userphotos/250x250/3857583.jpg","heroImage":"https://images.media-allrecipes.com/userphotos/560x315/3857583.jpg","reviews":{"MostHelpfulPositive":{"text":"Great for busy family; easy prep with few ingredients. I broiled for last few minutes in oven to crisp n brown chicken. Also,  I poured off the juice into saucepan on stove on high heat, mixed 1/4c milk n 2T cornstarch in  small bowl, then added that once juice boiled. Boil until desired thickness of sauce, then pour over now-rested chicken.","rating":5.0,"reviewID":5610523,"helpfulCount":43,"dateLastModified":"September 20, 2016","submitter":{"userID":20440377,"name":"Beach Mama","profileUrl":"/cook/20440377/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":469,"madeRecipesCount":1,"city":null,"region":null}},"MostHelpfulNegative":{"text":"This was ok, not special or something I will add to my regular rotation made as written. The picture is misleading in that it shows a crispy skin and the recipe states skinless. The sauce was flavorful but runny, not sticky. Everybody ate it. No complaints, but no raves either. If I make it again, it will be with major changes that render it a different recipe.  BTW, why in the world are there so many reviews by folks who have not made the recipe? It skews the rating & is a disservice to fellow cooks who want to try it. I wish Allrecipes would screen & eliminate these reviews.","rating":3.0,"reviewID":6084655,"helpfulCount":16,"dateLastModified":"March 15, 2018","submitter":{"userID":2918010,"name":"BJS","profileUrl":"/cook/2918010/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":1,"favoritesCount":1949,"madeRecipesCount":98,"city":null,"region":null}},"MostPositiveIndex":1,"MostCriticalIndex":4,"Reviews":[{"text":"Great for busy family; easy prep with few ingredients. I broiled for last few minutes in oven to crisp n brown chicken. Also,  I poured off the juice into saucepan on stove on high heat, mixed 1/4c milk n 2T cornstarch in  small bowl, then added that once juice boiled. Boil until desired thickness of sauce, then pour over now-rested chicken.","rating":5.0,"reviewID":5610523,"helpfulCount":43,"dateLastModified":"September 20, 2016","submitter":{"userID":20440377,"name":"Beach Mama","profileUrl":"/cook/20440377/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":469,"madeRecipesCount":1,"city":null,"region":null}},{"text":"I love recipes that are this delicious and require minimal time, effort and ingredients! I browned my chicken thighs on the stove with a bit of oil first, then poured the sauce over top and put in the oven for 25 min. I used 1 clove of minced garlic instead of powdered. Family loved it, even my picky 6 year old.","rating":5.0,"reviewID":5766951,"helpfulCount":22,"dateLastModified":"February 14, 2017","submitter":{"userID":2105613,"name":"Andria Shilliday","profileUrl":"/cook/2105613/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":53,"madeRecipesCount":8,"city":null,"region":null}},{"text":"I made this using the recipe as directed, except I also added some lime juice to cut the sweetness down. I used chicken thighs with skin on and dipped them into the mixture and placed in a cast iron skillet. I then poured the sauce over the thighs. I baked at 375 for 45 minutes because the thighs were large and then broiled for a few minutes until the skin was crispy.","rating":4.0,"reviewID":6036064,"helpfulCount":19,"dateLastModified":"January 12, 2018","submitter":{"userID":2466051,"name":"John Williams","profileUrl":"/cook/2466051/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/userphotos/90x90/125012.jpg"}]},"followersCount":8,"favoritesCount":94,"madeRecipesCount":13,"city":null,"region":null}},{"text":"This was ok, not special or something I will add to my regular rotation made as written. The picture is misleading in that it shows a crispy skin and the recipe states skinless. The sauce was flavorful but runny, not sticky. Everybody ate it. No complaints, but no raves either. If I make it again, it will be with major changes that render it a different recipe.  BTW, why in the world are there so many reviews by folks who have not made the recipe? It skews the rating & is a disservice to fellow cooks who want to try it. I wish Allrecipes would screen & eliminate these reviews.","rating":3.0,"reviewID":6084655,"helpfulCount":16,"dateLastModified":"March 15, 2018","submitter":{"userID":2918010,"name":"BJS","profileUrl":"/cook/2918010/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":1,"favoritesCount":1949,"madeRecipesCount":98,"city":null,"region":null}},{"text":"Simple and delicious! Wasn't sure if I was supposed to use fresh or dried rosemary (doesn't specify), so I used dried (a little less than called for, b/c like I said, I wasn't sure) and that worked out great. The whole family enjoyed this. I used some skinless legs too for the kids. A definite keeper~YUM! Thanks for sharing. :)","rating":5.0,"reviewID":5593156,"helpfulCount":9,"dateLastModified":"August 31, 2016","submitter":{"userID":2945555,"name":"Christina","profileUrl":"/cook/christina/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/userphotos/90x90/4996346.jpg"}]},"followersCount":6711,"favoritesCount":3059,"madeRecipesCount":2620,"city":null,"region":null}},{"text":"I thought the amount of honey & garlic powder  sounded like too much for six pieces of chicken so I changed it up a little. I browned the chicken first in 1 Tbls of olive oil in a cast-iron skillet, then I remove the chicken, added the butter, rosemary, 3 cloves of finely chopped garlic and 1/3 cup of honey to the pan,  stirred that around for a minute to combine, added the chicken back in and turned it in the sauce a few times  until it was well coated. Then I popped the skillet into the oven at 350° for 30 minutes. It came out moist, beautifully browned with a nice sticky coating and very tasty. I served it with some stir fried Asian style veggies and steamed rice. Very good dinner!","rating":4.0,"reviewID":6083483,"helpfulCount":7,"dateLastModified":"March 14, 2018","submitter":{"userID":7021690,"name":"VickiefromCa","profileUrl":"/cook/7021690/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/userphotos/90x90/4733463.jpg"}]},"followersCount":1,"favoritesCount":13,"madeRecipesCount":11,"city":null,"region":null}},{"text":"The five stars are for the ease of the recipe.\nThe next is the end results  of everyone loved it. Even my picky chicken eaters(those breast people)loved it; so I knew I had a hit. Will be doing it again,thanks.","rating":5.0,"reviewID":6035892,"helpfulCount":6,"dateLastModified":"January 12, 2018","submitter":{"userID":4296810,"name":"Kcooks","profileUrl":"/cook/4296810/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":1565,"madeRecipesCount":4,"city":null,"region":null}},{"text":"I loved this recipe- I had on hand all the ingredients and only had to get the chicken!  The only advice I have is to cook the chicken at a little lower temperature for a longer amount of time so that it's well cooked- tasted great!!","rating":5.0,"reviewID":5981694,"helpfulCount":5,"dateLastModified":"November 18, 2017","submitter":{"userID":21259348,"name":"DanDan","profileUrl":"/cook/21259348/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png"}]},"followersCount":0,"favoritesCount":58,"madeRecipesCount":23,"city":null,"region":null}},{"text":"So good!  I followed the instructions as written, but with 5 skinless chicken breasts.  Turned out wonderful over a bed of steamed rice!","rating":5.0,"reviewID":5872378,"helpfulCount":4,"dateLastModified":"June 25, 2017","submitter":{"userID":15877010,"name":"Kari","profileUrl":"/cook/15877010/","photo":{"urls":[{"url":"https://images.media-allrecipes.com/userphotos/90x90/3928593.jpg"}]},"followersCount":1,"favoritesCount":5,"madeRecipesCount":12,"city":null,"region":null}}]},"totalReviews":90};
 </script>
 
 <section id="reviews" class="recipe-reviews" ng-controller="ar_controllers_recipe_reviews" 
@@ -2340,7 +1902,7 @@
         <a class="icon-read--reviews" href="" ng-click="$event.preventDefault();reviewModalDialog(1, sortBy)" aria-label="Read all reviews">
             <span>Read all reviews</span>  <span class="svg-icon--recipe-navbar--rate svg-icon--recipe-navbar--rate-dims"></span>
         </a>
-    <span class="recipe-reviews__header--count">83</span>
+    <span class="recipe-reviews__header--count">90</span>
 
     
 
@@ -2385,11 +1947,11 @@
 </div>
 
 <ol>
-    <li><h4 class="helpful-header">103 Ratings</h4></li>
+    <li><h4 class="helpful-header">115 Ratings</h4></li>
         <li>
-            <div title="64 cooks loved it!">
+            <div title="68 cooks loved it!">
                 <div class="reviewsummary--bar">
-                    <div class="reviewsummary--percent" style="width: 62%">&nbsp;</div>
+                    <div class="reviewsummary--percent" style="width: 59%">&nbsp;</div>
                 </div>
                 <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars= 5 >
         <img height="14" width="14" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
@@ -2401,9 +1963,9 @@
             </div>
         </li>
         <li>
-            <div title="30 cooks liked it!">
+            <div title="37 cooks liked it!">
                 <div class="reviewsummary--bar">
-                    <div class="reviewsummary--percent" style="width: 29%">&nbsp;</div>
+                    <div class="reviewsummary--percent" style="width: 32%">&nbsp;</div>
                 </div>
                 <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars= 4 >
         <img height="14" width="14" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
@@ -2415,9 +1977,9 @@
             </div>
         </li>
         <li>
-            <div title="4 cooks thought it was OK">
+            <div title="5 cooks thought it was OK">
                 <div class="reviewsummary--bar">
-                    <div class="reviewsummary--percent" style="width: 3%">&nbsp;</div>
+                    <div class="reviewsummary--percent" style="width: 4%">&nbsp;</div>
                 </div>
                 <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars= 3 >
         <img height="14" width="14" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
@@ -2429,9 +1991,9 @@
             </div>
         </li>
         <li>
-            <div title="4 cooks didn&#39;t like it">
+            <div title="3 cooks didn&#39;t like it">
                 <div class="reviewsummary--bar">
-                    <div class="reviewsummary--percent" style="width: 3%">&nbsp;</div>
+                    <div class="reviewsummary--percent" style="width: 2%">&nbsp;</div>
                 </div>
                 <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars= 2 >
         <img height="14" width="14" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
@@ -2443,9 +2005,9 @@
             </div>
         </li>
         <li>
-            <div title="1 cooks couldn&#39;t eat it">
+            <div title="2 cooks couldn&#39;t eat it">
                 <div class="reviewsummary--bar">
-                    <div class="reviewsummary--percent" style="width: 0%">&nbsp;</div>
+                    <div class="reviewsummary--percent" style="width: 1%">&nbsp;</div>
                 </div>
                 <div class="rating-stars" data-scroll-to-anchor="reviews" data-ratingstars= 1 >
         <img height="14" width="14" src="https://images.media-allrecipes.com/ar-images/icons/rating-stars/full-star-2015.svg" role="presentation"/>
@@ -2478,7 +2040,7 @@
                         <ul class="cook-details__favorites favorites-count">
                             <li>
                                 <span class="icon--cook-card-favorite" title="Favorites"></span>
-                                <format-large-number number="465"></format-large-number>
+                                <format-large-number number="469"></format-large-number>
                             </li>
                         </ul>
                         <ul class="cook-details__recipes-made recipes-made-count">
@@ -2545,7 +2107,7 @@ Great for busy family; easy prep with few ingredients. I broiled for last few mi
                         <ul class="cook-details__favorites favorites-count">
                             <li>
                                 <span class="icon--cook-card-favorite" title="Favorites"></span>
-                                <format-large-number number="1940"></format-large-number>
+                                <format-large-number number="1949"></format-large-number>
                             </li>
                         </ul>
                         <ul class="cook-details__recipes-made recipes-made-count">
@@ -2642,7 +2204,7 @@ This was ok, not special or something I will add to my regular rotation made as 
                         <ul class="cook-details__favorites favorites-count">
                             <li>
                                 <span class="icon--cook-card-favorite" title="Favorites"></span>
-                                <format-large-number number="465"></format-large-number>
+                                <format-large-number number="469"></format-large-number>
                             </li>
                         </ul>
                         <ul class="cook-details__recipes-made recipes-made-count">
@@ -2841,7 +2403,7 @@ I made this using the recipe as directed, except I also added some lime juice to
                         <ul class="cook-details__favorites favorites-count">
                             <li>
                                 <span class="icon--cook-card-favorite" title="Favorites"></span>
-                                <format-large-number number="1940"></format-large-number>
+                                <format-large-number number="1949"></format-large-number>
                             </li>
                         </ul>
                         <ul class="cook-details__recipes-made recipes-made-count">
@@ -2909,13 +2471,13 @@ This was ok, not special or something I will add to my regular rotation made as 
                         <ul class="cook-details__favorites favorites-count">
                             <li>
                                 <span class="icon--cook-card-favorite" title="Favorites"></span>
-                                <format-large-number number="3066"></format-large-number>
+                                <format-large-number number="3059"></format-large-number>
                             </li>
                         </ul>
                         <ul class="cook-details__recipes-made recipes-made-count">
                             <li>
                                 <span class="icon--cook-card-made" title="Recipes Made"></span>
-                                <format-large-number number="2619"></format-large-number>
+                                <format-large-number number="2620"></format-large-number>
                             </li>
                         </ul>
                     </li>
@@ -2960,6 +2522,73 @@ Simple and delicious! Wasn&#39;t sure if I was supposed to use fresh or dried ro
 
         <article class="reviewer-info imadeit-enabled">         
                 <div class="recipe-details-cook-stats-container">
+    <a href="https://www.allrecipes.com/cook/7021690/">
+
+         
+                <ul class="cook-details">
+                    <li>
+
+                        <img class="img-profile elevate-cook-thumbnail" data-lazy-load data-original-src="https://images.media-allrecipes.com/userphotos/90x90/4733463.jpg" alt="" title=""  src="https://images.media-allrecipes.com/ar/spacer.gif" style="display: inline;" />
+                    </li>
+                    <li class="cook-info">
+                        <h4 itemprop="author">  VickiefromCa 
+                         </h4>
+
+                        <ul class="cook-details__favorites favorites-count">
+                            <li>
+                                <span class="icon--cook-card-favorite" title="Favorites"></span>
+                                <format-large-number number="13"></format-large-number>
+                            </li>
+                        </ul>
+                        <ul class="cook-details__recipes-made recipes-made-count">
+                            <li>
+                                <span class="icon--cook-card-made" title="Recipes Made"></span>
+                                <format-large-number number="11"></format-large-number>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+  
+
+
+
+
+
+    </a>
+</div> 
+ 
+
+
+
+            
+            <div class="stars-and-date-container">
+                <span class="stars stars-4" data-scroll-to-anchor="reviews" data-ratingstars="4"></span>
+
+                <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                    <meta itemprop="ratingValue" content="4">
+                </div>
+                <div itemprop="dateCreated" content="2018-03-14" class="review-date">3/14/2018</div>
+            </div>
+        </article>
+
+        <p itemprop="reviewBody">
+I thought the amount of honey &amp; garlic powder  sounded like too much for six pieces of chicken so I changed it up a little. I browned the chicken first in 1 Tbls of olive oil in a cast-iron skil...
+        </p>
+        <div class="review-detail">
+            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/6083483/" ng-click="$event.preventDefault();reviewModalDialog(5, sortBy)" aria-label="View Review Details">
+                <span class="svg-icon--recipe-page--open_modal_gr svg-icon--recipe-page--open_modal_gr-dims"></span>
+                <span>Read more</span>
+            </a>
+        </div>
+    </div>
+
+            <div class="review-divider"></div>
+    <div class="review-container clearfix" itemprop="review" itemscope itemtype="http://schema.org/Review">
+        <meta id="metaRecipeTitle" itemprop="itemReviewed" />
+
+        <article class="reviewer-info imadeit-enabled">         
+                <div class="recipe-details-cook-stats-container">
     <a href="https://www.allrecipes.com/cook/4296810/">
 
          
@@ -2975,7 +2604,7 @@ Simple and delicious! Wasn&#39;t sure if I was supposed to use fresh or dried ro
                         <ul class="cook-details__favorites favorites-count">
                             <li>
                                 <span class="icon--cook-card-favorite" title="Favorites"></span>
-                                <format-large-number number="1564"></format-large-number>
+                                <format-large-number number="1565"></format-large-number>
                             </li>
                         </ul>
                         <ul class="cook-details__recipes-made recipes-made-count">
@@ -3015,14 +2644,13 @@ The five stars are for the ease of the recipe.
 The next is the end results  of everyone loved it. Even my picky chicken eaters(those breast people)loved it; so I knew I had a hit. Will be doing ...
         </p>
         <div class="review-detail">
-            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/6035892/" ng-click="$event.preventDefault();reviewModalDialog(5, sortBy)" aria-label="View Review Details">
+            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/6035892/" ng-click="$event.preventDefault();reviewModalDialog(6, sortBy)" aria-label="View Review Details">
                 <span class="svg-icon--recipe-page--open_modal_gr svg-icon--recipe-page--open_modal_gr-dims"></span>
                 <span>Read more</span>
             </a>
         </div>
     </div>
 
-            <div class="review-divider"></div>
     <div class="review-container clearfix" itemprop="review" itemscope itemtype="http://schema.org/Review">
         <meta id="metaRecipeTitle" itemprop="itemReviewed" />
 
@@ -3082,7 +2710,7 @@ The next is the end results  of everyone loved it. Even my picky chicken eaters(
 I loved this recipe- I had on hand all the ingredients and only had to get the chicken!  The only advice I have is to cook the chicken at a little lower temperature for a longer amount of time s...
         </p>
         <div class="review-detail">
-            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/5981694/" ng-click="$event.preventDefault();reviewModalDialog(6, sortBy)" aria-label="View Review Details">
+            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/5981694/" ng-click="$event.preventDefault();reviewModalDialog(7, sortBy)" aria-label="View Review Details">
                 <span class="svg-icon--recipe-page--open_modal_gr svg-icon--recipe-page--open_modal_gr-dims"></span>
                 <span>Read more</span>
             </a>
@@ -3147,72 +2775,7 @@ I loved this recipe- I had on hand all the ingredients and only had to get the c
         <p itemprop="reviewBody">
 So good!  I followed the instructions as written, but with 5 skinless chicken breasts.  Turned out wonderful over a bed of steamed rice!        </p>
         <div class="review-detail">
-            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/5872378/" ng-click="$event.preventDefault();reviewModalDialog(7, sortBy)" aria-label="View Review Details">
-                <span class="svg-icon--recipe-page--open_modal_gr svg-icon--recipe-page--open_modal_gr-dims"></span>
-                <span>Read more</span>
-            </a>
-        </div>
-    </div>
-
-    <div class="review-container clearfix" itemprop="review" itemscope itemtype="http://schema.org/Review">
-        <meta id="metaRecipeTitle" itemprop="itemReviewed" />
-
-        <article class="reviewer-info imadeit-enabled">         
-                <div class="recipe-details-cook-stats-container">
-    <a href="https://www.allrecipes.com/cook/7231847/">
-
-         
-                <ul class="cook-details">
-                    <li>
-
-                        <img class="img-profile elevate-cook-thumbnail" data-lazy-load data-original-src="https://images.media-allrecipes.com/mobile/allrecipes/images/icon-user-default_v2.png" alt="" title=""  src="https://images.media-allrecipes.com/ar/spacer.gif" style="display: inline;" />
-                    </li>
-                    <li class="cook-info">
-                        <h4 itemprop="author">  MyzB 
-                         </h4>
-
-                        <ul class="cook-details__favorites favorites-count">
-                            <li>
-                                <span class="icon--cook-card-favorite" title="Favorites"></span>
-                                <format-large-number number="67"></format-large-number>
-                            </li>
-                        </ul>
-                        <ul class="cook-details__recipes-made recipes-made-count">
-                            <li>
-                                <span class="icon--cook-card-made" title="Recipes Made"></span>
-                                <format-large-number number="2"></format-large-number>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-  
-
-
-
-
-
-    </a>
-</div> 
- 
-
-
-
-            
-            <div class="stars-and-date-container">
-                <span class="stars stars-5" data-scroll-to-anchor="reviews" data-ratingstars="5"></span>
-
-                <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                    <meta itemprop="ratingValue" content="5">
-                </div>
-                <div itemprop="dateCreated" content="2017-03-14" class="review-date">3/14/2017</div>
-            </div>
-        </article>
-
-        <p itemprop="reviewBody">
-Easy to follow recipe. Taste very good.  Worth the try!        </p>
-        <div class="review-detail">
-            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/5795432/" ng-click="$event.preventDefault();reviewModalDialog(8, sortBy)" aria-label="View Review Details">
+            <a class="review-detail__link" href="https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/reviews/5872378/" ng-click="$event.preventDefault();reviewModalDialog(8, sortBy)" aria-label="View Review Details">
                 <span class="svg-icon--recipe-page--open_modal_gr svg-icon--recipe-page--open_modal_gr-dims"></span>
                 <span>Read more</span>
             </a>
@@ -3236,7 +2799,7 @@ Easy to follow recipe. Taste very good.  Worth the try!        </p>
 
     <aside id="recipe-page-right-rail" class="recipe-page-right-rail four-tabs sticky-ads">
     
-        <right-rail-feed my-feed-data='{&quot;items&quot;:[{&quot;id&quot;:201849,&quot;recipeTitle&quot;:&quot;Mongolian Beef and Spring Onions&quot;,&quot;imageUrl&quot;:&quot;https://images.media-allrecipes.com/userphotos/250x250/1122980.jpg&quot;,&quot;cookId&quot;:3038453,&quot;rating&quot;:4.61,&quot;reviewCount&quot;:570,&quot;cookDisplayName&quot;:&quot;vkarlson&quot;,&quot;cookThumbnailUrl&quot;:&quot;https://images.media-allrecipes.com/global/features/mini/3057.jpg&quot;,&quot;cookFollowersCount&quot;:9,&quot;cookFavoriteCount&quot;:50,&quot;cookMadeRecipesCount&quot;:21,&quot;videoId&quot;:0,&quot;url&quot;:&quot;https://www.allrecipes.com/Recipe/Mongolian-Beef-and-Spring-Onions/&quot;,&quot;description&quot;:&quot;Thin-sliced beef flank steak gets a quick fry in hot oil, then is simmered in a sweet soy-based sauce with fresh green onions for a dish that\u0027s like eating out at home.&quot;,&quot;recommendationSource&quot;:3,&quot;sourceId&quot;:0,&quot;cookHandle&quot;:&quot;&quot;,&quot;cookProfileUrl&quot;:null,&quot;baseSiteUrl&quot;:&quot;https://www.allrecipes.com&quot;,&quot;baseImagesUrl&quot;:&quot;https://images.media-allrecipes.com&quot;},{&quot;id&quot;:15964,&quot;recipeTitle&quot;:&quot;Lemon Icebox Pie III&quot;,&quot;imageUrl&quot;:&quot;https://images.media-allrecipes.com/userphotos/250x250/439002.jpg&quot;,&quot;cookId&quot;:0,&quot;rating&quot;:4.5,&quot;reviewCount&quot;:296,&quot;cookDisplayName&quot;:&quot;Heather Simpson&quot;,&quot;cookThumbnailUrl&quot;:&quot;&quot;,&quot;cookFollowersCount&quot;:0,&quot;cookFavoriteCount&quot;:0,&quot;cookMadeRecipesCount&quot;:0,&quot;videoId&quot;:0,&quot;url&quot;:&quot;https://www.allrecipes.com/Recipe/Lemon-Icebox-Pie-III/&quot;,&quot;description&quot;:&quot; Cream cheese, condensed milk, lemon juice and rind is stirred up in a bowl until smooth, poured into a graham cracker crust, and then chilled.&quot;,&quot;recommendationSource&quot;:3,&quot;sourceId&quot;:0,&quot;cookHandle&quot;:null,&quot;cookProfileUrl&quot;:null,&quot;baseSiteUrl&quot;:&quot;https://www.allrecipes.com&quot;,&quot;baseImagesUrl&quot;:&quot;https://images.media-allrecipes.com&quot;}],&quot;referringId&quot;:254940,&quot;isStickyRightRail&quot;:true}'></right-rail-feed>
+        <right-rail-feed my-feed-data='{&quot;items&quot;:[{&quot;id&quot;:201849,&quot;recipeTitle&quot;:&quot;Mongolian Beef and Spring Onions&quot;,&quot;imageUrl&quot;:&quot;https://images.media-allrecipes.com/userphotos/250x250/1122980.jpg&quot;,&quot;cookId&quot;:3038453,&quot;rating&quot;:4.61,&quot;reviewCount&quot;:575,&quot;cookDisplayName&quot;:&quot;vkarlson&quot;,&quot;cookThumbnailUrl&quot;:&quot;https://images.media-allrecipes.com/global/features/mini/3057.jpg&quot;,&quot;cookFollowersCount&quot;:9,&quot;cookFavoriteCount&quot;:50,&quot;cookMadeRecipesCount&quot;:21,&quot;videoId&quot;:0,&quot;url&quot;:&quot;https://www.allrecipes.com/Recipe/Mongolian-Beef-and-Spring-Onions/&quot;,&quot;description&quot;:&quot;Thin-sliced beef flank steak gets a quick fry in hot oil, then is simmered in a sweet soy-based sauce with fresh green onions for a dish that\u0027s like eating out at home.&quot;,&quot;recommendationSource&quot;:3,&quot;sourceId&quot;:0,&quot;cookHandle&quot;:&quot;&quot;,&quot;cookProfileUrl&quot;:null,&quot;baseSiteUrl&quot;:&quot;https://www.allrecipes.com&quot;,&quot;baseImagesUrl&quot;:&quot;https://images.media-allrecipes.com&quot;},{&quot;id&quot;:213656,&quot;recipeTitle&quot;:&quot;Amazing Crusted Chicken&quot;,&quot;imageUrl&quot;:&quot;https://images.media-allrecipes.com/userphotos/250x250/1366176.jpg&quot;,&quot;cookId&quot;:3533850,&quot;rating&quot;:4.4,&quot;reviewCount&quot;:145,&quot;cookDisplayName&quot;:&quot;Chefbound&quot;,&quot;cookThumbnailUrl&quot;:&quot;https://images.media-allrecipes.com/userphotos/50x50/746822.jpg&quot;,&quot;cookFollowersCount&quot;:115,&quot;cookFavoriteCount&quot;:386,&quot;cookMadeRecipesCount&quot;:132,&quot;videoId&quot;:0,&quot;url&quot;:&quot;https://www.allrecipes.com/Recipe/Amazing-Crusted-Chicken/&quot;,&quot;description&quot;:&quot;Chicken breasts are coated with a savory blend of cheese-flavored crackers, French-fried onions, and toasted sesame seeds. A thin layer of mayonnaise keeps the crust from falling off and keeps the chicken moist and juicy.&quot;,&quot;recommendationSource&quot;:3,&quot;sourceId&quot;:0,&quot;cookHandle&quot;:&quot;jonae_chefbound&quot;,&quot;cookProfileUrl&quot;:null,&quot;baseSiteUrl&quot;:&quot;https://www.allrecipes.com&quot;,&quot;baseImagesUrl&quot;:&quot;https://images.media-allrecipes.com&quot;}],&quot;referringId&quot;:254940,&quot;isStickyRightRail&quot;:true}'></right-rail-feed>
 
 
         <div id="dockedSlots">
@@ -3386,7 +2949,7 @@ Easy to follow recipe. Taste very good.  Worth the try!        </p>
     <script type="text/javascript">
         window.Toggles={"AdTest":false,"RecipePreferences":true,"AzureRelatedcontentRecipes":true,"RdpRightRailRecommendations":true,"RecipePagePerf":true,"StreamsTest":true,"TastePrefOverlays":true,"RdpTasteCarousel":true,"MonetizedIngredients":false,"FixedGrid":true,"VideoWatchIcon":true,"reCaptcha":false,"Optimizely":false,"WatchVideoRDP":false};
 /**/
-window.dataLayer={"version":"1.0","pageInstanceId":"www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/","externalLinkId":"","page":{"pageInfo":{"pageId":"254940","pageName":"/recipe/254940/honey-garlic-chicken-with-rosemary/","destinationUrl":"https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/?internalSource=popular\u0026referringContentType=home%20page\u0026clickId=cardslot%202","referringUrl":"https://www.allrecipes.com/","sysEnv":"RD0003FFA88643","variant":"Control","abTestName":"RDP_Video_Step","version":"20160811","issueDate":"04/09/2018 05:33:01","effectiveDate":"04/09/2018 05:33:01","domain":"www.allrecipes.com","parameters":{"internalSource":"popular","referringContentType":"home page","clickId":"cardslot 2"}},"category":{"primaryCategory":"recipes","contentType":"recipe","subContentType":"","adZone":"","adKeys":"status=visitor;oid=2D657D74850781AC-6000010500000922;fit=0;r=254940;id=254940;k=[13,39,53,94,125,127,150,195,201,221,241,252,552,625]","contentSource":"1"},"attributes":{"contentId":"254940","title":"Honey Garlic Chicken with Rosemary","country":"USA"}},"event":[],"user":[{"analyticsId":"v1|2D657D74850781AC-6000010500000922","segment":{"adStatus":"visitor","visitorType":"anonymous","loginStatus":"no"},"profile":[{"profileInfo":{"profileId":"0","loginType":"None"}}],"magFollower":false}],"newsletter":{"mailingId":"","mailingName":"","mailingDate":"","mailingLinkGroup":"","mailingLinkName":""}};/**/
+window.dataLayer={"version":"1.0","pageInstanceId":"www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/","externalLinkId":"","page":{"pageInfo":{"pageId":"254940","pageName":"/recipe/254940/honey-garlic-chicken-with-rosemary/","destinationUrl":"https://www.allrecipes.com/recipe/254940/honey-garlic-chicken-with-rosemary/?internalSource=popular\u0026referringContentType=home%20page\u0026clickId=cardslot%202","sysEnv":"RD0003FFA88643","variant":"Control","abTestName":"RDP_Video_Step","version":"20160811","issueDate":"04/22/2018 23:22:55","effectiveDate":"04/22/2018 23:22:55","domain":"www.allrecipes.com","parameters":{"internalSource":"popular","referringContentType":"home page","clickId":"cardslot 2"}},"category":{"primaryCategory":"recipes","contentType":"recipe","subContentType":"","adZone":"","adKeys":"status=unrecognized;oid=;fit=1;r=254940;id=254940;k=[13,39,53,94,125,127,150,195,201,221,241,252,552,625]","contentSource":"1"},"attributes":{"contentId":"254940","title":"Honey Garlic Chicken with Rosemary","country":"USA"}},"event":[],"user":[{"analyticsId":"","segment":{"adStatus":"unrecognized","visitorType":"anonymous","loginStatus":"no"},"profile":[{"profileInfo":{"profileId":"0","loginType":"None"}}],"magFollower":false}],"newsletter":{"mailingId":"","mailingName":"","mailingDate":"","mailingLinkGroup":"","mailingLinkName":""}};/**/
         var enviromentOmnitureId = 'rdirdallrecipes';
 
         var pubsub = new Pubsub();
@@ -3405,15 +2968,15 @@ window.dataLayer={"version":"1.0","pageInstanceId":"www.allrecipes.com/recipe/25
         }
 
     </script>
-    <script src='https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/analytics.bundled.js' ></script>
+    <script src='https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/analytics.bundled.js' ></script>
 
 
     
 
-<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/main-bottom-recipe.bundled.js' ></script>
-<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/main-bottom-templates-recipe.bundled.js' ></script>
-<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/recipe.bundled.js' ></script>
-<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/recipe-templates.bundled.js' ></script>
+<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/main-bottom-recipe.bundled.js' ></script>
+<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/main-bottom-templates-recipe.bundled.js' ></script>
+<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/recipe.bundled.js' ></script>
+<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/recipe-templates.bundled.js' ></script>
     <script>
         angular.module("allrecipes").value("userReview", userReview);
 
@@ -3425,7 +2988,7 @@ window.dataLayer={"version":"1.0","pageInstanceId":"www.allrecipes.com/recipe/25
         AR.topTaste =  {"Abbreviation":"f","DisplayText":"Family-Friendly"};
 
         (function () {
-            lazyCss('https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/recipe-details-css.bundled.Css');
+            lazyCss('https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/recipe-details-css.bundled.Css');
         })();
     </script>
 
@@ -3433,11 +2996,11 @@ window.dataLayer={"version":"1.0","pageInstanceId":"www.allrecipes.com/recipe/25
     <script>
         angular.module('allrecipes')
             .constant('Constant', {
-                'version': '1.115.0.3956'
+                'version': '1.117.0.4026'
             });
     </script>
 
-<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.115.0.3956/account-js.bundled.js' ></script>
+<script src='https://secureimages.allrecipes.com/assets/deployables/v-1.117.0.4026/account-js.bundled.js' ></script>
 
        <!-- script_facebookpixel -->
         <script>
