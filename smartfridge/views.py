@@ -95,7 +95,6 @@ def receive_barcode(request, barcode):
         else:
             item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
             item.save()
- 
 
     # Display the received item name on my fridge
     except:
