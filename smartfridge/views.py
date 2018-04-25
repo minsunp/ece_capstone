@@ -85,10 +85,17 @@ def receive_barcode(request, barcode):
     dataframe = pd.read_csv(mypath + "/../Grocery_UPC_Database.csv", delimiter=',',)
     #name = (dataframe.loc[[0]]).iloc[0]['name']
     try:
-        name = (dataframe.loc[dataframe['upc12'] == int(barcode)]).iloc[0]['name']
+        name = str((dataframe.loc[dataframe['upc12'] == int(barcode)]).iloc[0]['name'])
         print(str(name))
-        item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
-        item.save()
+        existing_items = Item.objects.filter(item_name=name)
+        if (existing_items.count() == 1):
+            for item in existing_items:
+                item.item_count = item.item_count + 1
+                item.save()
+        else:
+            item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+            item.save()
+ 
 
     # Display the received item name on my fridge
     except:
