@@ -251,10 +251,12 @@ def your_recipes(request):
     #response = requests.get("https://www.delish.com/cooking/recipe-ideas/a19856526/strawberry-shortcake-layer-cake-recipe/")
 
         soup = BeautifulSoup(fp)
-        #recipe_name = soup.find_all(class_='recipe-summary__h1')
-        recipe_name = soup.find_all(class_='recipe-hed')
+        recipe_image = soup.find_all(class_='grid-card-image-container')
+        recipe_text = soup.find_all(class_='fixed-recipe-card__info')
         #recipe_name = soup.find_all(class_='navbar-brand')
         context['recipe_name'] = recipe_name
+        context['recipe_text'] = recipe_text
+
     return render(request, 'smartfridge/your_recipes.html', context)
 
 ##################### My Profile ###########################
