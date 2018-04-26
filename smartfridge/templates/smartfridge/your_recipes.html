@@ -6,7 +6,12 @@
 
 {% block content %}
 
-{{recipe_image}}
-{{recipe_text}}
+{% for image in recipe_image %}
+    {{image}}
+{% endfor %}
+
+{% for text in recipe_text %}
+    {{text}}
+{% endfor %}
 
 {% endblock %}
