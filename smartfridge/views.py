@@ -241,17 +241,19 @@ def get_shoppingList_json(request):
 ##################### Your Recipes ###########################
 
 from bs4 import BeautifulSoup
-
+import requests
 @login_required
 def your_recipes(request):
     context = {}
     mypath = os.path.dirname(os.path.abspath(__file__))
-    with open(mypath + "/templates/smartfridge/sample_recipe.html") as fp:
+    with open(mypath + "/templates/smartfridge/sample_recipe.html", encoding="utf-8") as fp:
+    #response = requests.get("https://www.delish.com/cooking/recipe-ideas/a19856526/strawberry-shortcake-layer-cake-recipe/")
+
         soup = BeautifulSoup(fp)
         #recipe_name = soup.find_all(class_='recipe-summary__h1')
         recipe_name = soup.find_all(class_='recipe-hed')
         #recipe_name = soup.find_all(class_='navbar-brand')
-    context['recipe_name'] = recipe_name
+        context['recipe_name'] = recipe_name
     return render(request, 'smartfridge/your_recipes.html', context)
 
 ##################### My Profile ###########################

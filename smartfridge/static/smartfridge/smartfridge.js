@@ -33,6 +33,7 @@ function addItem() {
 }
 
 function editItem() {
+    
 }
 
 function getMyFridgeList(response) {
