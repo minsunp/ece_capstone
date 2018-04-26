@@ -254,7 +254,7 @@ def your_recipes(request):
         recipe_image = soup.find_all(class_='grid-card-image-container')
         recipe_text = soup.find_all(class_='fixed-recipe-card__info')
         #recipe_name = soup.find_all(class_='navbar-brand')
-        context['recipe_name'] = recipe_name
+        context['recipe_image'] = recipe_image
         context['recipe_text'] = recipe_text
 
     return render(request, 'smartfridge/your_recipes.html', context)
