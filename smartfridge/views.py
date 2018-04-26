@@ -259,9 +259,11 @@ def your_recipes(request):
         recipe_text = []
         for text in soup.find_all('div', class_='fixed-recipe-card__info'):
             recipe_text.append(text)
+        
         #for span in soup.find_all("span", class_='fixed-recipe-card__title-link'):
         #    recipe_text.append(span.text.encode("utf-8"))
         #recipe_name = soup.find_all(class_='navbar-brand')
+        
         context['recipe_image'] = recipe_image
         context['recipe_text'] = recipe_text
 

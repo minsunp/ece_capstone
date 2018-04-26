@@ -7,11 +7,15 @@
 {% block content %}
 
 {% for image in recipe_image %}
-    {{image}}
+    {% for im in image %}
+        {{im}}
+    {% endfor %}
 {% endfor %}
 
 {% for text in recipe_text %}
-    {{text}}
+    {% for t in text %}
+        {{t}}
+    {% endfor %}
 {% endfor %}
 
 {% endblock %}
