@@ -102,6 +102,18 @@ def receive_barcode(request, barcode):
     
     return render(request, 'smartfridge/myFridge.html', context)
 
+def receive_sensor_eggs(request, count):
+    item = Item(item_name="Eggs", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=count)
+    item.save()
+
+    return render(request, 'smartfridge/myFridge.html', context)
+
+def receive_sensor_milk(request, amount):
+    item = Item(item_name="Milk", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+    item.save()
+
+    return render(request, 'smartfridge/myFridge.html', context)
+
 @login_required
 def del_my_fridge(request):
     # Request is always POST
@@ -252,6 +264,7 @@ def your_recipes(request):
 
         soup = BeautifulSoup(fp)
 
+        """
         recipe_image = []
         for image in soup.find_all('div', class_='grid-card-image-container'):
             recipe_image.append(image)
@@ -259,12 +272,16 @@ def your_recipes(request):
         recipe_text = []
         for text in soup.find_all('div', class_='fixed-recipe-card__info'):
             recipe_text.append(text)
-        
-        #for span in soup.find_all("span", class_='fixed-recipe-card__title-link'):
-        #    recipe_text.append(span.text.encode("utf-8"))
+        """
+        recipe_text = []
+        for span in soup.find_all("span", class_='fixed-recipe-card__title-link'):
+            recipe_text.append(span.text.encode("utf-8"))
         #recipe_name = soup.find_all(class_='navbar-brand')
-        
-        context['recipe_image'] = recipe_image
+
+        #recipe_url = []
+        #for 
+
+        #context['recipe_image'] = recipe_image
         context['recipe_text'] = recipe_text
 
     return render(request, 'smartfridge/your_recipes.html', context)
