@@ -253,10 +253,10 @@ def your_recipes(request):
         soup = BeautifulSoup(fp)
         recipe_image = soup.find_all('div', class_='grid-card-image-container')
         recipe_text = []
-        for header in soup.find_all('h3', class_='fixed-recipe-card__info'):
-            recipe_text.append(header.find_all('span').text.encode("utf-8"))
+        for span in soup.find_all("span", class_='fixed-recipe-card__title-link'):
+            recipe_text.append(span.text.encode("utf-8"))
         #recipe_name = soup.find_all(class_='navbar-brand')
-        context['recipe_image'] = recipe_image
+        context['recipe_image'] = []
         context['recipe_text'] = recipe_text
 
     return render(request, 'smartfridge/your_recipes.html', context)
