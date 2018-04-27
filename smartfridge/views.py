@@ -103,12 +103,14 @@ def receive_barcode(request, barcode):
     return render(request, 'smartfridge/myFridge.html', context)
 
 def receive_sensor_eggs(request, count):
+    context = {}
     item = Item(item_name="Eggs", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=count)
     item.save()
 
     return render(request, 'smartfridge/myFridge.html', context)
 
 def receive_sensor_milk(request, amount):
+    context = {}
     item = Item(item_name="Milk", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
     item.save()
 
