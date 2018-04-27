@@ -123,9 +123,10 @@ def receive_sensor_milk1(request, amount):
     if (existing_items.count() == 1):
         for item in existing_items:
             # Replace the amount here
+            item.item_amount = amount;
             item.save()
     else:
-        item = Item(item_name="Milk1", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+        item = Item(item_name="Milk1", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1, item_amount=amount)
         item.save()
 
     return render(request, 'smartfridge/myFridge.html', context)
@@ -133,13 +134,14 @@ def receive_sensor_milk1(request, amount):
 def receive_sensor_milk2(request, amount):
     context = {}
     existing_items = Item.objects.filter(item_name="Milk2")
-    # If there's already Milk1, just replace the amount
+    # If there's already Milk2, just replace the amount
     if (existing_items.count() == 1):
         for item in existing_items:
             # Replace the amount here
+            item.item_amount = amount;
             item.save()
     else:
-        item = Item(item_name="Milk2", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+        item = Item(item_name="Milk2", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1, item_amount=amount)
         item.save()
 
     return render(request, 'smartfridge/myFridge.html', context)
@@ -177,6 +179,8 @@ def get_myFridgeList_json(request):
         myFridge_item['name'] = item.item_name
         myFridge_item['expiry_date'] = str(item.expiry_date)
         myFridge_item['count'] = str(item.item_count)
+        if (item.item_amount):
+            myFridge_item['amount'] = str(item.item_amount)
         myFridge_item['item_id'] = item.id
         myFridge_list.append(myFridge_item)
 
