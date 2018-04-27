@@ -104,15 +104,43 @@ def receive_barcode(request, barcode):
 
 def receive_sensor_eggs(request, count):
     context = {}
-    item = Item(item_name="Eggs", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=count)
-    item.save()
+    existing_items = Item.objects.filter(item_name="Eggs")
+    # If there's already Eggs, just replace the count
+    if (existing_items.count() == 1):
+        for item in existing_items:
+            item.item_count = count
+            item.save()
+    else:
+        item = Item(item_name="Eggs", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=count)
+        item.save()
 
     return render(request, 'smartfridge/myFridge.html', context)
 
-def receive_sensor_milk(request, amount):
+def receive_sensor_milk1(request, amount):
     context = {}
-    item = Item(item_name="Milk", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
-    item.save()
+    existing_items = Item.objects.filter(item_name="Milk1")
+    # If there's already Milk1, just replace the amount
+    if (existing_items.count() == 1):
+        for item in existing_items:
+            # Replace the amount here
+            item.save()
+    else:
+        item = Item(item_name="Milk1", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+        item.save()
+
+    return render(request, 'smartfridge/myFridge.html', context)
+
+def receive_sensor_milk2(request, amount):
+    context = {}
+    existing_items = Item.objects.filter(item_name="Milk2")
+    # If there's already Milk1, just replace the amount
+    if (existing_items.count() == 1):
+        for item in existing_items:
+            # Replace the amount here
+            item.save()
+    else:
+        item = Item(item_name="Milk2", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+        item.save()
 
     return render(request, 'smartfridge/myFridge.html', context)
 
