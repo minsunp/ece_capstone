@@ -179,8 +179,11 @@ def get_myFridgeList_json(request):
         myFridge_item['name'] = item.item_name
         myFridge_item['expiry_date'] = str(item.expiry_date)
         myFridge_item['count'] = str(item.item_count)
-        if (item.item_amount):
+        if (hasattr(item, 'item_amount')):
             myFridge_item['amount'] = str(item.item_amount)
+            myFridge_item['has_amount'] = True
+        else:
+            myFridge_item['has_amount'] = False
         myFridge_item['item_id'] = item.id
         myFridge_list.append(myFridge_item)
 

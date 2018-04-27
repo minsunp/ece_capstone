@@ -49,7 +49,7 @@ function showMyFridgeList(response) {
  
     $(response).each(function() {
         var amount = "";
-        if (this.amount) amount = "<p>Amount: " + this.amount + "/100</p>";
+        if (this.has_amount) amount = "<p>Amount: " + this.amount + "/100</p>";
         // Add html for an item to my fridge page
         $("#fridge_items").append(
             "<div class='col-3-3'>" + 
