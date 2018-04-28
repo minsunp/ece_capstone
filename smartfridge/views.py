@@ -64,7 +64,7 @@ def add_myFridge(request):
         return HttpResponse(json.dumps(response_text), content_type='application/json')
 
     # Create Item model
-    item = Item(item_name=request.POST['name'], expiry_date=request.POST['expiry_date'], item_count=request.POST['count'])
+    item = Item(item_name=request.POST['name'], expiry_date=request.POST['expiry_date'], item_count=request.POST['count'], item_amount=-1)
     item.save()
     # Send the item info to js - to update my fridge page - need to get rid of this later
     response_text = {}
@@ -93,7 +93,7 @@ def receive_barcode(request, barcode):
                 item.item_count = item.item_count + 1
                 item.save()
         else:
-            item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1)
+            item = Item(item_name=name, expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=1, item_amount=-1)
             item.save()
 
     # Display the received item name on my fridge
@@ -111,7 +111,7 @@ def receive_sensor_eggs(request, count):
             item.item_count = count
             item.save()
     else:
-        item = Item(item_name="Eggs", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=count)
+        item = Item(item_name="Eggs", expiry_date=datetime.datetime.now().strftime("%Y-%m-%d"), item_count=count, item_amount=-1)
         item.save()
 
     return render(request, 'smartfridge/myFridge.html', context)
@@ -179,7 +179,7 @@ def get_myFridgeList_json(request):
         myFridge_item['name'] = item.item_name
         myFridge_item['expiry_date'] = str(item.expiry_date)
         myFridge_item['count'] = str(item.item_count)
-        if (item.item_amount != 0):
+        if (item.item_amount != -1):
             myFridge_item['amount'] = str(item.item_amount)
             myFridge_item['has_amount'] = True
         else:
