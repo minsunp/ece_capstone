@@ -6,19 +6,21 @@ $(document).ready(function() {
     $("#edit_item").on('show.bs.modal', function(event) {
         var button = $(event.relatedTarget); // Find out which button was clicked to trigger this,
         var item_id = button.data('whatever'); // And retrieve data-whatever from that button
-        var modal = $(this); // The comment modal
+        var modal = $(this); // The edit modal
         // Get the Item model from the item id
         $.ajax({
-            url: "/smartfridge/get_item_from_id", // should return: {name:~, expiry_date:~, count:~, amount:~}
+            url: "/smartfridge/get_item_from_id", // should return: [{name:~, expiry_date:~, count:~, amount:~}]
             dataType: "json",
             type: "POST",
             data: "id="+item_id+"&csrfmiddlewaretoken="+getCSRFToken(),
             success: function(response) {
-                // Fill in name, expiry date, and count of the item to the existing one
-                modal.find('#edit_name').val(this.name);
-                modal.find('#edit_expiry_date').val(this.expiry_date);
-                modal.find('#edit_count').val(this.count);
-                modal.find('#edit_amount').val(this.amount);
+                $(response).each(function() {
+                    // Fill in name, expiry date, and count of the item to the existing one
+                    modal.find('#edit_name').val(this.name);
+                    modal.find('#edit_expiry_date').val(this.expiry_date);
+                    modal.find('#edit_count').val(this.count);
+                    modal.find('#edit_amount').val(this.amount);
+                });
             }
         }); 
     });

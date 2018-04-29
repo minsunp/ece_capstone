@@ -182,14 +182,16 @@ def del_my_fridge(request):
 
 @login_required
 def get_item_from_id(request):
+    item_list = []
     item = Item.objects.get(id=request.POST['id'])
     this_item = {}
     this_item['name'] = item.item_name
     this_item['expiry_date'] = str(item.expiry_date)
     this_item['count'] = str(item.item_count)
     this_item['amount'] = str(item.item_amount)
+    item_list.append(this_item)
 
-    response_text = json.dumps(this_item)
+    response_text = json.dumps(item_list)
     return HttpResponse(response_text, content_type='application/json')
 
 @login_required
