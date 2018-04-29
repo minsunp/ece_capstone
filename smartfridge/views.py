@@ -315,33 +315,27 @@ import io
 @login_required
 def your_recipes(request):
     context = {}
+    """
     mypath = os.path.dirname(os.path.abspath(__file__))
     with io.open(mypath + "/templates/smartfridge/sample_recipe.html", "r", encoding="utf-8") as fp:
-    #response = requests.get("https://www.delish.com/cooking/recipe-ideas/a19856526/strawberry-shortcake-layer-cake-recipe/")
-
         soup = BeautifulSoup(fp)
-
-        """
-        recipe_image = []
-        for image in soup.find_all('div', class_='grid-card-image-container'):
-            recipe_image.append(image)
-
-        recipe_text = []
-        for text in soup.find_all('div', class_='fixed-recipe-card__info'):
-            recipe_text.append(text)
-        """
         recipe_text = []
         for span in soup.find_all("span", class_='fixed-recipe-card__title-link'):
             recipe_text.append(span.text.encode("utf-8"))
-        #recipe_name = soup.find_all(class_='navbar-brand')
-
-        #recipe_url = []
-        #for 
-
-        #context['recipe_image'] = recipe_image
         context['recipe_text'] = recipe_text
+    """
 
-    return render(request, 'smartfridge/your_recipes.html', context)
+    response = requests.get("https://www.allrecipes.com/recipes/96/salad/?internalSource=hub%20nav&referringId=1&referringContentType=recipe%20hub&linkName=hub%20nav%20daughter&clickId=hub%20nav%202")
+    soup = BeautifulSoup(response.content, "html.parser")
+    recipe_full = []
+    for recipe_item in soup.find_all('article', class_="fixed-recipe-card"):
+        recipe_one = {}
+        recipe_one['recipe'] = recipe_item
+        recipe_full.append(recipe_one)
+
+    context['recipe_full'] = recipe_full # recipe_full = [{'recipe':html_code}, {'recipe':html_code}]
+    response_text = json.dumps(recipe_full)
+    return HttpResponse(response_text, content_type='application/json')
 
 ##################### My Profile ###########################
 

@@ -262,6 +262,20 @@ function showShoppingList(response) {
     });
 }
 
+/******************** Recipe *************************/
+function getRecipes() {
+    $.ajax({
+        url: "/smartfridge/your_recipes",
+        dataType: "json",
+        success: function(response) {
+            $(".fixed-recipe-card").remove();
+            $(response).each(function() {
+                $("#recipe_list").append(this.recipe);
+            });
+        }
+    });
+}
+
 /******************** The Rest *************************/
 
 function getCSRFToken() {
@@ -281,5 +295,7 @@ function displayError(message) {
 
 window.onload = getShoppingList;
 window.onload = getMyFridgeList;
+window.onload = getRecipes;
 window.setInterval(getMyFridgeList, 5000);
 window.setInterval(getShoppingList, 5000);
+window.setInterval(getRecipes, 5000);
