@@ -63,13 +63,13 @@ def add_myFridge(request):
         response_text['error'] = 'You must add count to new item'
         return HttpResponse(json.dumps(response_text), content_type='application/json')
 
-    existing_items = Item.objects.filter(item_name=name)
+    existing_items = Item.objects.filter(item_name=request.POST['name'])
     if (existing_items.count() == 1): # the item already exists,
         for item in existing_items: # replace all parameters in it, then save
             item.item_name = request.POST['name']
-            item.expiry_date=request.POST['expiry_date']
-            item.item_count=request.POST['count']
-            item.item_amount=request.POST['amount']
+            item.expiry_date = request.POST['expiry_date']
+            item.item_count = request.POST['count']
+            item.item_amount = request.POST['amount']
             item.save()
     else: # item doesn't exists,
         # Create Item model
