@@ -1,18 +1,43 @@
 
 /**************** My Fridge ***********************/
 
+$(document).ready(function() {
+    // Whenever an EDIT modal is opened,  
+    $("#edit_item").on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget); // Find out which button was clicked to trigger this,
+        var item_id = button.data('whatever'); // And retrieve data-whatever from that button
+        var modal = $(this); // The comment modal
+        // Get the Item model from the item id
+        $.ajax({
+            url: "/smartfridge/get_item_from_id", // should return: {name:~, expiry_date:~, count:~, amount:~}
+            dataType: "json",
+            data: "id="+item_id+"&csrfmiddlewaretoken="+getCSRFToken(),
+            success: function(response) {
+                // Fill in name, expiry date, and count of the item to the existing one
+                modal.find('#edit_name').val(this.name);
+                modal.find('#edit_expiry_date').val(this.expiry_date);
+                modal.find('#edit_count').val(this.count);
+                modal.find('#edit_amount').val(this.amount);
+            }
+        }); 
+    });
+});
+
 // Manually add item to my fridge
 function addItem() {
     // Get all inputs from modal
     var name_element = $("#name");
     var expiry_date_element = $("#expiry_date");
     var count_element = $("#count");
+    var amount_element = $('#amount');
     var name = name_element.val();
     var expiry_date = expiry_date_element.val();
     var count = count_element.val();
+    var amount = amount_element.val();
     name_element.val('');
     expiry_date_element.val('');
     count_element.val('');
+    amount_element.val('');
     // Close the modal
     $("#new_item").modal('toggle');
 
@@ -21,7 +46,7 @@ function addItem() {
         url: "/smartfridge/add_myFridge",
         type: "POST",
         // Data to send: send user-added content of new item
-        data: "name="+name+"&expiry_date="+expiry_date+"&count="+count+"&csrfmiddlewaretoken="+getCSRFToken(),
+        data: "name="+name+"&expiry_date="+expiry_date+"&count="+count+"&amount="+amount+"&csrfmiddlewaretoken="+getCSRFToken(),
         // Type of data we expect back
         dataType : "json",
         // If request was successful
@@ -33,7 +58,36 @@ function addItem() {
 }
 
 function editItem() {
-    
+    // Get all inputs from modal
+    var name_element = $("#edit_name");
+    var expiry_date_element = $("#edit_expiry_date");
+    var count_element = $("#edit_count");
+    var amount_element = $('#edit_amount');
+    var name = name_element.val();
+    var expiry_date = expiry_date_element.val();
+    var count = count_element.val();
+    var amount = amount_element.val();
+    name_element.val('');
+    expiry_date_element.val('');
+    count_element.val('');
+    amount_element.val('');
+    // Close the modal
+    $("#edit_item").modal('toggle');
+
+    // Send POST request to views.py > add_myFridge()
+    $.ajax({
+        url: "/smartfridge/add_myFridge",
+        type: "POST",
+        // Data to send: send user-added content of new item
+        data: "name="+name+"&expiry_date="+expiry_date+"&count="+count+"&amount="+amount+"&csrfmiddlewaretoken="+getCSRFToken(),
+        // Type of data we expect back
+        dataType : "json",
+        // If request was successful
+        success: function(response) {
+            showMessage_myFridge("Your change has been saved");
+            getMyFridgeList(response);
+        }
+    });
 }
 
 function getMyFridgeList(response) {
@@ -68,7 +122,7 @@ function showMyFridgeList(response) {
                         "<p>Count: " + this.count + "</p>" + 
                         amount + 
                         "<button type='button' class='btn btn-primary' onclick='addShoppingList(" + this.item_id + ")'>Buy</button>" +
-                        "<button type='button' class='btn btn-info' data-toggle='modal' data-target='#edit_item'>Edit</button>" +
+                        "<button type='button' class='btn btn-info' data-toggle='modal' data-whatever='" + this.item_id + "' data-target='#edit_item'>Edit</button>" +
                         "<button type='button' class='btn btn-danger' onclick='delete_myFridge(" + this.item_id + ")'>X</button>" +
                     "</div>" +
 

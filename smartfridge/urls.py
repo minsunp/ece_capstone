@@ -19,6 +19,8 @@ urlpatterns = [
     url(r'^receive_sensor_eggs/(?P<count>\d+)$', views.receive_sensor_eggs, name='receive_sensor_eggs'),
     url(r'^receive_sensor_milk1/(?P<amount>\d+)$', views.receive_sensor_milk1, name='receive_sensor_milk1'),
     url(r'^receive_sensor_milk2/(?P<amount>\d+)$', views.receive_sensor_milk2, name='receive_sensor_milk2'),
+    url(r'^get_item_from_id/(?P<id>\d+)$', views.get_item_from_id, name='get_item_from_id'),
+    
     # Route for built-in authentication with our own custom login page
     url(r'^login$', auth_views.login, {'template_name':'smartfridge/login.html'}, name='login'),
     # Route to logout a user and send them back to the login page
