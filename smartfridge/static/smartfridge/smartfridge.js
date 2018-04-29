@@ -11,10 +11,10 @@ $(document).ready(function() {
         $.ajax({
             url: "/smartfridge/get_item_from_id", // should return: {name:~, expiry_date:~, count:~, amount:~}
             dataType: "json",
+            type: "POST",
             data: "id="+item_id+"&csrfmiddlewaretoken="+getCSRFToken(),
             success: function(response) {
                 // Fill in name, expiry date, and count of the item to the existing one
-                console.log("this???");
                 modal.find('#edit_name').val(this.name);
                 modal.find('#edit_expiry_date').val(this.expiry_date);
                 modal.find('#edit_count').val(this.count);
