@@ -103,8 +103,8 @@ function showMyFridgeList(response) {
     $(".col-3-3").remove(); // remove all previous items
  
     $(response).each(function() {
-        var amount = "";
-        if (this.has_amount) amount = "<p>Amount: " + this.amount + "/100</p>";
+        //var amount = "";
+        //if (this.has_amount) amount = "<p>Amount: " + this.amount + "/100</p>";
         // Add html for an item to my fridge page
         $("#fridge_items").append(
             "<div class='col-3-3'>" + 
@@ -121,7 +121,7 @@ function showMyFridgeList(response) {
                     "<div class='card-body'>" +
                         "<p>Expiry Date: " + this.expiry_date + "</p>" +
                         "<p>Count: " + this.count + "</p>" + 
-                        amount + 
+                        "<p>Amount: " + this.amount + "/100</p>" + 
                         "<button type='button' class='btn btn-primary' onclick='addShoppingList(" + this.item_id + ")'>Buy</button>" +
                         "<button type='button' class='btn btn-info' data-toggle='modal' data-whatever='" + this.item_id + "' data-target='#edit_item'>Edit</button>" +
                         "<button type='button' class='btn btn-danger' onclick='delete_myFridge(" + this.item_id + ")'>X</button>" +

@@ -21,7 +21,7 @@ class Item(models.Model):
     item_name = models.CharField(max_length=2000)
     expiry_date = models.DateField()
     item_count = models.IntegerField()
-    item_amount = models.IntegerField(blank=True)
+    item_amount = models.IntegerField()
     # item_img = models.FileField(upload_to="images", blank=True)
 
 # Items in the shopping list
